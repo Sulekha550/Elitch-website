@@ -1,0 +1,91 @@
+import React, { useState, useEffect, useRef } from 'react';
+
+export default function AnimatedCounter({ value, duration = 1600, className = '' }) {
+  const [displayValue, setDisplayValue] = useState(value);
+  const elementRef = useRef(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    // Check if prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      setDisplayValue(value);
+      return;
+    }
+
+    // Parse value: e.g. "5M+", "10k+", "30M+", "$30M+", "45+", "5,000,000+"
+    // Extract prefix, number, and suffix
+    const match = value.match(/^([^0-9]*)([0-9,.]+)(.*)$/);
+    if (!match) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const prefix = match[1] || '';
+    const rawNumberStr = match[2].replace(/,/g, '');
+    const targetNumber = parseFloat(rawNumberStr);
+    const suffix = match[3] || '';
+    const isDecimal = rawNumberStr.includes('.');
+    const decimalPlaces = isDecimal ? rawNumberStr.split('.')[1].length : 0;
+    const hasCommas = match[2].includes(',');
+
+    if (isNaN(targetNumber)) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated.current) {
+            hasAnimated.current = true;
+            let startTimestamp = null;
+
+            const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+              // Quintic ease out for a silky smooth stop
+              const easeOut = 1 - Math.pow(1 - progress, 4);
+              const currentNum = easeOut * targetNumber;
+
+              let formattedNum;
+              if (isDecimal) {
+                formattedNum = currentNum.toFixed(decimalPlaces);
+              } else {
+                formattedNum = Math.floor(currentNum).toString();
+                if (hasCommas) {
+                  formattedNum = formattedNum.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+              }
+
+              setDisplayValue(`${prefix}${formattedNum}${suffix}`);
+
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                setDisplayValue(value); // ensure final exact string
+              }
+            };
+
+            window.requestAnimationFrame(step);
+            if (elementRef.current) observer.unobserve(elementRef.current);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const currentRef = elementRef.current;
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, [value, duration]);
+
+  return (
+    <span ref={elementRef} className={`inline-block tabular-nums ${className}`}>
+      {displayValue}
+    </span>
+  );
+}

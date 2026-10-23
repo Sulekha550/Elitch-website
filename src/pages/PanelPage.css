@@ -1,0 +1,381 @@
+/* =========================================
+   PANEL PAGE — Elicit Research & Insights
+   Matches Home Page: Slate + Pink + Rose
+   Secondary accents: Purple + Cyan
+========================================= */
+
+.panel-page {
+  --panel-pink: #ec4899;
+  --panel-rose: #e11d48;
+  --panel-purple: #a855f7;
+  --panel-cyan: #06b6d4;
+
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.dark .panel-page {
+  background: #020617;
+  color: #f1f5f9;
+}
+
+/* Smooth scrolling for in-page links */
+.panel-page {
+  scroll-behavior: smooth;
+}
+
+/* Hero */
+
+.panel-page .panel-hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.panel-page .panel-hero img {
+  transition: transform 1.2s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.panel-page .panel-hero:hover img {
+  transform: scale(1.025);
+}
+
+/* Eyebrow labels */
+
+.panel-page .panel-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  border-radius: 999px;
+  background: rgba(236, 72, 153, 0.09);
+  padding: 8px 13px;
+  color: #db2777;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.dark .panel-page .panel-eyebrow {
+  color: #f9a8d4;
+  background: rgba(236, 72, 153, 0.1);
+}
+
+/* Gradient headings */
+
+.panel-page .panel-gradient-text {
+  background: linear-gradient(
+    100deg,
+    #f472b6 0%,
+    #c084fc 52%,
+    #f43f5e 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Buttons */
+
+.panel-page .panel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #db2777, #e11d48);
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(219, 39, 119, 0.2);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.panel-page .panel-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.3);
+}
+
+.panel-page .panel-button:focus-visible {
+  outline: 3px solid rgba(236, 72, 153, 0.45);
+  outline-offset: 4px;
+}
+
+/* Overview statistics */
+
+.panel-page .panel-stat-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.panel-page .panel-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.2);
+}
+
+.panel-page .panel-stat-card::after {
+  position: absolute;
+  right: -45px;
+  bottom: -65px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+/* Global map card */
+
+.panel-page .panel-map-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(236, 72, 153, 0.08),
+      transparent 55%
+    ),
+    #fff;
+  box-shadow: 0 15px 45px rgba(15, 23, 42, 0.05);
+}
+
+.dark .panel-page .panel-map-card {
+  border-color: rgba(148, 163, 184, 0.16);
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(168, 85, 247, 0.12),
+      transparent 60%
+    ),
+    #0f172a;
+}
+
+/* =========================================
+   BOTTOM CTA — ABOVE FOOTER
+========================================= */
+
+.panel-page .panel-cta-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+/* Panel Book card */
+
+.panel-page .panel-book-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 360px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 95% 5%,
+      rgba(103, 232, 249, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(130deg, #be185d 0%, #9333ea 58%, #0e7490 100%);
+  padding: clamp(28px, 4vw, 56px);
+  color: #fff;
+}
+
+.panel-page .panel-book-cta::before {
+  position: absolute;
+  z-index: -1;
+  top: -65px;
+  right: -40px;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 24px rgba(255, 255, 255, 0.035),
+    0 0 0 48px rgba(255, 255, 255, 0.025);
+  content: "";
+  pointer-events: none;
+}
+
+.panel-page .panel-book-cta::after {
+  position: absolute;
+  z-index: -1;
+  bottom: -100px;
+  left: -70px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(55px);
+  content: "";
+  pointer-events: none;
+}
+
+.panel-page .panel-book-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* White download button */
+
+.panel-page .panel-download-button {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  background: #fff;
+  padding: 13px 18px;
+  color: #be185d;
+  font-size: 0.875rem;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.15);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.panel-page .panel-download-button:hover {
+  transform: translateY(-3px);
+  background: #fdf2f8;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.22);
+}
+
+/* Community CTA card */
+
+.panel-page .panel-community-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 360px;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-left: 1px solid rgba(148, 163, 184, 0.15);
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(6, 182, 212, 0.13),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 5% 0%,
+      rgba(219, 39, 119, 0.14),
+      transparent 40%
+    ),
+    #020617;
+  padding: clamp(28px, 4vw, 56px);
+  color: #f8fafc;
+}
+
+.panel-page .panel-community-cta::before {
+  position: absolute;
+  z-index: -1;
+  top: -80px;
+  right: -70px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.2);
+  filter: blur(75px);
+  content: "";
+  pointer-events: none;
+}
+
+.panel-page .panel-community-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(244, 114, 182, 0.25);
+  border-radius: 15px;
+  background: rgba(236, 72, 153, 0.12);
+  color: #f9a8d4;
+}
+
+.panel-page .panel-platform-button {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: linear-gradient(110deg, #db2777, #9333ea 58%, #0891b2);
+  padding: 13px 18px;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 750;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(219, 39, 119, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.panel-page .panel-platform-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 32px rgba(219, 39, 119, 0.3);
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .panel-page .panel-cta-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .panel-page .panel-book-cta,
+  .panel-page .panel-community-cta {
+    min-height: 320px;
+    padding: 30px 24px;
+  }
+
+  .panel-page .panel-community-cta {
+    border-top: 1px solid rgba(148, 163, 184, 0.15);
+    border-left: 0;
+  }
+
+  .panel-page .panel-map-card {
+    border-radius: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel-page *,
+  .panel-page *::before,
+  .panel-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

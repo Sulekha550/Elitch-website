@@ -1,0 +1,99 @@
+
+/* Careers page theme */
+.careers-page {
+  position: relative;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+html.dark .careers-page {
+  color: #f8fafc;
+  background-color: #020617;
+}
+
+/* Prevent old global heading styles from hiding the text */
+.careers-page h1,
+.careers-page h2,
+.careers-page h3 {
+  opacity: 1;
+  visibility: visible;
+  text-shadow: none;
+}
+
+/* Hero */
+.careers-page .careers-hero {
+  isolation: isolate;
+  background: transparent;
+}
+
+/* Gradient title */
+.careers-page .careers-gradient-text {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  background: linear-gradient(
+    90deg,
+    #ec4899 0%,
+    #a855f7 50%,
+    #f43f5e 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Cards */
+.careers-page .careers-card,
+.careers-page .careers-job-card {
+  color: #101426;
+  backdrop-filter: blur(14px);
+}
+
+.careers-page .careers-card p,
+.careers-page .careers-job-card p {
+  color: #475569;
+}
+
+/* Form controls */
+.careers-page input,
+.careers-page textarea {
+  box-sizing: border-box;
+}
+
+.careers-page input::placeholder,
+.careers-page textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Accessible focus */
+.careers-page button:focus-visible,
+.careers-page a:focus-visible,
+.careers-page input:focus-visible,
+.careers-page textarea:focus-visible {
+  outline: 3px solid rgba(168, 85, 247, 0.4);
+  outline-offset: 3px;
+}
+
+/* Responsive layout */
+@media (max-width: 640px) {
+  .careers-page .careers-hero {
+    border-radius: 22px;
+  }
+
+  .careers-page .careers-gradient-text {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .careers-page *,
+  .careers-page *::before,
+  .careers-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
