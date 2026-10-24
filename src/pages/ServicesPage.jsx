@@ -265,13 +265,13 @@ export default function ServicesPage() {
 
                   {/* Service image */}
                   <div
-                    className={`w-full lg:col-span-5 ${
-                      index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'
-                    }`}
+                   className={`w-full lg:col-span-5 ${
+                     service.id === 'research-design' ? 'lg:order-1' : (index % 2 === 1 ? 'lg:order-2' : 'lg:order-1')
+                   }`}
                   >
                     {service.image?.url ? (
                       <div className="relative">
-                        <div aria-hidden="true" className="absolute -right-2 -top-2 h-full w-full border-4 border-pink-500 rounded-2xl" />
+                        <div aria-hidden="true" className={`absolute -top-2 h-full w-full border-4 border-pink-500 rounded-2xl ${index % 2 === 1 ? '-right-2' : '-left-2'}`} />
                         <div className="group relative h-[260px] w-full overflow-hidden rounded-2xl border border-slate-200/80 shadow-md sm:h-[340px] lg:h-[420px] dark:border-white/10">
                         <img
                           src={service.image.url}
@@ -309,9 +309,9 @@ export default function ServicesPage() {
 
                   {/* Service details */}
                   <div
-                    className={`flex flex-col justify-center space-y-6 lg:col-span-7 ${
-                      index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'
-                    }`}
+                     className={`flex flex-col justify-center space-y-6 lg:col-span-7 ${
+                       service.id === 'research-design' ? 'lg:order-2' : (index % 2 === 1 ? 'lg:order-1' : 'lg:order-2')
+                     }`}
                   >
 
                     <div>

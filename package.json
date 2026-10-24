@@ -1,14 +1,18 @@
 {
   "name": "elicit-research-platform",
-  "private": true,
+  "engines": {
+    "node": ">=18 <=22"
+  },
   "version": "2.0.0",
   "type": "module",
   
+
 "scripts": {
   "dev": "vite",
-  "build": "node ./node_modules/vite/bin/vite.js build",
+  "build": "vite build",
   "preview": "vite preview"
 }
+
 ,
   "dependencies": {
     "clsx": "^2.1.1",
