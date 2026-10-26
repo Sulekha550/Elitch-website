@@ -8,6 +8,21 @@ export default {
   theme: {
     extend: {
       colors: {
+        vardha: {
+          bg: '#0C0D0C',
+          'bg-secondary': '#101211',
+          card: '#171916',
+          'card-hover': '#1F221E',
+          gold: '#C7A15C',
+          'gold-light': '#D8B677',
+          'gold-dark': '#8C6F35',
+          'gold-subtle': 'rgba(199, 161, 92, 0.12)',
+          text: '#F2EEE7',
+          muted: '#A4A49B',
+          subtle: '#6B7068',
+          border: 'rgba(255, 255, 255, 0.08)',
+          'border-gold': 'rgba(199, 161, 92, 0.28)',
+        },
         brand: {
           950: '#050811',
           900: '#070C18',
@@ -43,6 +58,32 @@ export default {
           amber: '#F59E0B',
           emerald: '#10B981',
           coral: '#F43F5E',
+        },
+        admin: {
+          purple: {
+            DEFAULT: '#6D28D9',
+            deep: '#4C1D95',
+            light: '#8B5CF6',
+            subtle: '#F3E8FF',
+            border: '#DDD6FE',
+          },
+          pink: {
+            DEFAULT: '#EC4899',
+            rose: '#DB2777',
+            soft: '#FCE7F3',
+            border: '#FBCFE8',
+          },
+          lavender: {
+            DEFAULT: '#F3E8FF',
+            subtle: '#FAF5FF',
+          },
+          bg: '#FAF8FC',
+          surface: '#FFFFFF',
+          card: '#FFFFFF',
+          heading: '#241B35',
+          body: '#786D88',
+          muted: '#9E94AD',
+          border: '#EDE5F5',
         },
       },
       fontFamily: {

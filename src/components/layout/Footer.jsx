@@ -112,7 +112,7 @@ export default function Footer() {
 
             {/* Contact block */}
             <div className="rounded-xl border border-slate-200/80 dark:border-white/[0.07] bg-slate-50 dark:bg-white/[0.02] p-4 flex flex-col gap-2.5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-pink-600 dark:text-pink-400 mb-1">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-pink-600 dark:text-pink-400 mb-1">
                 Official Inquiries &amp; RFQ
               </p>
               <div className="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">

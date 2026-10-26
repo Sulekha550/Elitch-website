@@ -793,3 +793,158 @@ html.light main .hero-overlay-left {
     rgba(248, 250, 252, 0.12) 100%
   );
 }
+
+/* =========================================
+   VARDHA LUXURY ADMIN DESIGN SYSTEM
+========================================= */
+
+.vardha-admin-root {
+  background-color: #0C0D0C;
+  color: #F2EEE7;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: dark;
+}
+
+.vardha-admin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.vardha-admin-scrollbar::-webkit-scrollbar-track {
+  background: #101211;
+}
+.vardha-admin-scrollbar::-webkit-scrollbar-thumb {
+  background: #2A2F28;
+  border-radius: 9999px;
+}
+.vardha-admin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #C7A15C;
+}
+
+.vardha-gold-text {
+  background: linear-gradient(135deg, #DFBE7B 0%, #C7A15C 50%, #A68037 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vardha-gold-btn {
+  background: linear-gradient(135deg, #C7A15C 0%, #B89249 100%);
+  color: #0C0D0C;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.vardha-gold-btn:hover {
+  background: linear-gradient(135deg, #D8B677 0%, #C7A15C 100%);
+  box-shadow: 0 0 20px rgba(199, 161, 92, 0.35);
+  transform: translateY(-1px);
+}
+
+.vardha-glass-card {
+  background: rgba(23, 25, 22, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.vardha-card-interactive {
+  transition: all 0.25s ease-out;
+}
+.vardha-card-interactive:hover {
+  border-color: rgba(199, 161, 92, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(199, 161, 92, 0.1);
+}
+
+/* ========================================================
+   VARDHA ADMIN PANEL — ELEGANT PINK x PURPLE LUXURY LIGHT THEME
+   ======================================================== */
+.vardha-admin-root {
+  background-color: #FAF8FF !important;
+  color: #302347 !important;
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  color-scheme: light !important;
+}
+
+/* Light Admin Scrollbars */
+.vardha-admin-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.vardha-admin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.vardha-admin-scrollbar::-webkit-scrollbar-thumb {
+  background: #EAE3F3;
+  border-radius: 9999px;
+}
+.vardha-admin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #B8A1F5;
+}
+
+/* Admin Card standard */
+.admin-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE3F3;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(48, 35, 71, 0.03), 0 4px 14px rgba(120, 81, 216, 0.04);
+  transition: all 0.2s ease-in-out;
+}
+.admin-card-hover:hover {
+  border-color: #B8A1F5;
+  box-shadow: 0 6px 20px rgba(120, 81, 216, 0.07), 0 2px 6px rgba(48, 35, 71, 0.03);
+  transform: translateY(-1px);
+}
+
+/* Admin Inputs */
+.admin-input {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE3F3;
+  color: #302347;
+  transition: all 0.15s ease-in-out;
+}
+.admin-input:focus {
+  outline: none;
+  border-color: #7851D8;
+  box-shadow: 0 0 0 3px rgba(120, 81, 216, 0.12);
+}
+.admin-input::placeholder {
+  color: #9B91A8;
+}
+
+/* Admin Gradient Buttons */
+.admin-btn-primary {
+  background: linear-gradient(135deg, #7851D8 0%, #6541B8 100%);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(120, 81, 216, 0.25);
+  transition: all 0.2s ease;
+}
+.admin-btn-primary:hover {
+  background: linear-gradient(135deg, #6541B8 0%, #5433A0 100%);
+  box-shadow: 0 4px 14px rgba(120, 81, 216, 0.35);
+  transform: translateY(-1px);
+}
+
+.admin-btn-pink {
+  background: linear-gradient(135deg, #E879B9 0%, #D95FA6 100%);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(232, 121, 185, 0.25);
+  transition: all 0.2s ease;
+}
+.admin-btn-pink:hover {
+  background: linear-gradient(135deg, #D95FA6 0%, #C44E93 100%);
+  box-shadow: 0 4px 14px rgba(232, 121, 185, 0.35);
+  transform: translateY(-1px);
+}
+
+.admin-btn-secondary {
+  background-color: #FFFFFF;
+  color: #302347;
+  border: 1px solid #EAE3F3;
+  box-shadow: 0 1px 2px rgba(48, 35, 71, 0.04);
+  transition: all 0.2s ease;
+}
+.admin-btn-secondary:hover {
+  background-color: #F3EEFF;
+  border-color: #B8A1F5;
+  color: #7851D8;
+}
+
+

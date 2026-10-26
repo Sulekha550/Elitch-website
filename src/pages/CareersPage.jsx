@@ -142,7 +142,7 @@ export default function CareersPage() {
 
       {/* Hero */}
       <section className="relative z-10 overflow-hidden border-b border-white/80 px-3 pb-3 dark:border-white/10 sm:px-5">
-        <div className="img-zoom-container group relative mx-auto h-[calc(100svh-150px)] min-h-[500px] w-full max-w-[1600px] overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br from-pink-100 via-purple-100 to-rose-100 shadow-xl shadow-purple-900/5 dark:border-white/10 dark:from-slate-900 dark:via-purple-950/40 dark:to-slate-900 sm:min-h-[560px]">
+        <div className="img-zoom-container group relative mx-auto h-[calc(100svh-6rem)] min-h-[600px] w-full max-w-[1600px] overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br from-pink-100 via-purple-100 to-rose-100 shadow-xl shadow-purple-900/5 dark:border-white/10 dark:from-pink-900/40 dark:via-purple-900/40 dark:to-rose-900/40 sm:min-h-[600px]">
           <img
             src={CAREERS_IMAGES.hero.url}
             alt={CAREERS_IMAGES.hero.alt}
@@ -179,7 +179,7 @@ export default function CareersPage() {
             }}
           />
 
-          <div className="relative z-10 flex h-full min-h-[500px] items-center sm:min-h-[560px]">
+          <div className="relative z-10 flex h-full min-h-[600px] items-center sm:min-h-[600px]">
             <div className="section-container w-full">
               <div className="max-w-3xl space-y-6 pt-10">
                 <nav

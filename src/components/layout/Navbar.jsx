@@ -110,11 +110,13 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home',     path: '/' },
+
     { name: 'Services', path: '/services', hasDropdown: true },
     { name: 'Panel',    path: '/panel',    badge: '5M+ Network' },
     { name: 'About Us', path: '/about' },
     { name: 'Careers',  path: '/careers',  hiring: true },
     { name: 'Contact',  path: '/contact' },
+    { name: 'Admin',    path: '/admin' },
   ];
 
   const closeMenu = () => setIsOpen(false);

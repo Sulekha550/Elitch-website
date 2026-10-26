@@ -164,7 +164,7 @@ export default function PanelPage() {
 
             <div className="relative h-[260px] overflow-hidden rounded-3xl border border-white/60 bg-slate-200 shadow-2xl shadow-purple-900/15 sm:h-[360px] lg:h-[430px] dark:border-white/10">
               <img
-                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1400&q=85"
+                src="/images/Home/images5.webp"
                 alt="A diverse research team collaborating around a table"
                 className="h-full w-full object-cover object-center"
                 loading="eager"
