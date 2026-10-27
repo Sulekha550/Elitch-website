@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "dev:all": "concurrently -k -n \"backend,frontend\" -c \"yellow.bold,cyan.bold\" \"npm run backend:dev\" \"npm run dev\"",
-    "build": "node ./node_modules/vite/bin/vite.js build"
+    "build": "node ./node_modules/vite/bin/vite.js build",
     "preview": "vite preview",
     "backend:dev": "node --watch backend/server.js",
     "backend:start": "node backend/server.js",
