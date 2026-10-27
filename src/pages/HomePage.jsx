@@ -63,16 +63,6 @@ export default function HomePage() {
         {/* Subtle background ambient glowing gradients */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-gradient-to-b from-pink-500/20 via-indigo-500/15 to-transparent rounded-full blur-3xl" />
-          <div className="absolute -top-32 right-1/4 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl" />
-          <div className="absolute -top-32 left-1/4 w-96 h-96 bg-pink-500/15 rounded-full blur-3xl" />
-          <div
-            className="absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)',
-              backgroundSize: '40px 40px',
-            }}
-          />
         </div>
 
         {/* Ambient 3D Interactive Canvas Scene */}
@@ -169,9 +159,9 @@ export default function HomePage() {
                     style={{ boxShadow: '0 20px 60px rgba(236,72,153,0.18), 0 8px 24px rgba(99,102,241,0.15)', background: 'linear-gradient(135deg, #8b5cf6 0%, #E91E63 100%)' }}
                   >
                     <img
-                      src="/images/Home/growth.jpeg"
+                      src="/images/Home/elicit-home-hero-chart-clean.webp"
                       alt="Business growth graph"
-                      className="w-full h-56 sm:h-72 md:h-80 lg:h-[400px] object-cover hover:scale-[1.02] transition-transform duration-700 ease-out"
+                      className="w-full h-56 sm:h-72 md:h-80 lg:h-[400px] object-cover transition-transform duration-700 ease-out"
                       loading="eager"
                       fetchPriority="high"
                       style={{ display: 'block' }}
@@ -214,22 +204,9 @@ export default function HomePage() {
                 </p>
               </ScrollReveal>
 
-              <ScrollReveal animation="fade-up" delay={240} duration={650}>
-                <div className="pt-2 flex items-center justify-center lg:justify-start gap-4">
-                  <button
-                    onClick={() => setVideoOpen(true)}
-                    className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-sm font-semibold text-slate-800 dark:text-white bg-white dark:bg-white/5 hover:bg-slate-50 dark:hover:bg-pink-950/50 border border-slate-200 dark:border-white/10 shadow-xs transition-all duration-300 active:scale-95"
-                  >
-                    <span className="w-8 h-8 rounded-full bg-gradient-to-tr from-pink-600 to-rose-500 text-white flex items-center justify-center shadow-md shadow-pink-600/30 group-hover:scale-110 transition-transform">
-                      <Play className="w-3.5 h-3.5 fill-white ml-0.5" />
-                    </span>
-                    <span>Watch Video</span>
-                  </button>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Right Column: 3 Offset Colorful Stat Blocks */}
+             </div>
+ 
+             {/* Right Column: 3 Offset Colorful Stat Blocks */}
             <div className="lg:col-span-5 relative mt-4 lg:mt-0">
               <ScrollReveal animation="fade-up" delay={200} duration={700}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-4 relative">
@@ -310,94 +287,6 @@ export default function HomePage() {
           </div>
 
           <ServicesMatrix />
-        </div>
-      </section>
-
-      {/* =========================================================================
-          SECTION 4: "We Translate Your Vision Into Action" (3 Feature Columns)
-         ========================================================================= */}
-      <section className="py-14 sm:py-20 lg:py-28 bg-slate-100 dark:bg-slate-900 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <ScrollReveal animation="fade-up" duration={650}>
-            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
-              <span className="text-xs font-mono uppercase tracking-widest text-pink-600 dark:text-pink-400 font-semibold px-3 py-1 rounded-full bg-pink-100 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-800/50 inline-block mb-3">
-                Execution Framework
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-extrabold text-slate-900 dark:text-white tracking-tight">
-                We Translate Your Vision Into Action
-              </h2>
-              <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base lg:text-lg mt-3">
-                Harnessing advanced statistical sampling and automated technology to convert corporate vision into market reality.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                icon: Search,
-                title: "Accurate Audience Measurement",
-                desc: "Helping you connect with people who matter; assisting your idea to become socially and financially hit.",
-                image: "/images/Home/image1.webp",
-                color: "from-pink-500/20 to-rose-500/20 text-pink-600 dark:text-pink-400"
-              },
-              {
-                icon: Cpu,
-                title: "Automated Tools",
-                desc: "Forget manual for it's the power of our techno-research that provides you with data that matters!",
-                image: "/images/Home/image2.webp",
-                color: "from-cyan-500/20 to-blue-500/20 text-cyan-600 dark:text-cyan-400"
-              },
-              {
-                icon: Globe,
-                title: "Accelerate Global Reach",
-                desc: "Let's go beyond the local borders and take your idea to the global domain.",
-                image: "/images/Home/image3.webp",
-                color: "from-purple-500/20 to-indigo-500/20 text-purple-600 dark:text-purple-400"
-              }
-            ].map((pillar, idx) => {
-              const Icon = pillar.icon;
-              return (
-                <ScrollReveal 
-                  key={pillar.title}
-                  animation="fade-up"
-                  delay={idx * 150}
-                  duration={650}
-                >
-                  <div className="group rounded-2xl sm:rounded-3xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-white/10 overflow-hidden shadow-xs hover:shadow-xl hover:border-pink-500/40 transition-all duration-300 flex flex-col h-full">
-                    <div className="relative h-44 sm:h-48 w-full overflow-hidden">
-                      <img 
-                        src={pillar.image} 
-                        alt={pillar.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent" />
-                      <div className="absolute top-4 left-4 p-3 rounded-2xl bg-white/10 backdrop-blur-md shadow-md border border-white/15">
-                        <Icon className="w-5 h-5 text-pink-400" />
-                      </div>
-                    </div>
-
-                    <div className="p-5 sm:p-7 flex flex-col justify-between flex-1">
-                      <div>
-                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
-                          {pillar.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
-                          {pillar.desc}
-                        </p>
-                      </div>
-
-                      <div className="pt-4 mt-5 sm:mt-6 border-t border-slate-200 dark:border-white/10 flex items-center justify-between text-xs font-mono font-semibold text-pink-600 dark:text-pink-400">
-                        <span>● Strategic Execution</span>
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
         </div>
       </section>
 

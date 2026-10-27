@@ -140,8 +140,6 @@ export default function Navbar() {
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-status-pulse" />
               Global Sampling Engine — 45+ Countries
             </span>
-            <span className="text-slate-300 dark:text-slate-700">|</span>
-            <span>ISO 20252 &amp; ESOMAR Aligned</span>
           </div>
           <div className="flex items-center gap-5">
             <a
@@ -164,7 +162,7 @@ export default function Navbar() {
         {/* Brand logo — circular ER emblem and ELICIT wordmark */}
         <Link
           to="/"
-          onClick={closeMenu}
+          onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           aria-label="Elicit Research & Insights Inc. — Home"
           className="flex min-w-0 items-center gap-2.5 sm:gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
         >
@@ -350,7 +348,7 @@ export default function Navbar() {
                 <NavLink
                   key={link.name}
                   to={link.path}
-                  onClick={closeMenu}
+                onClick={() => { closeMenu(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                   className={({ isActive }) =>
                     `flex items-center justify-between gap-3 px-3.5 py-3 rounded-xl text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 ${
                       isActive

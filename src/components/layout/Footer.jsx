@@ -42,47 +42,6 @@ export default function Footer() {
   return (
     <footer className="relative bg-white dark:bg-slate-950 border-t border-slate-200/70 dark:border-white/[0.07] text-slate-600 dark:text-slate-300">
 
-      {/* ── Pre-footer CTA Banner ── */}
-      <div className="border-b border-slate-100 dark:border-white/[0.06]">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="rounded-2xl border border-slate-200/80 dark:border-white/[0.08] bg-slate-50 dark:bg-white/[0.02] px-8 py-10 sm:px-12 sm:py-12 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-8">
-                <span className="badge badge-pink mb-4 inline-flex">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  Global Feasibility Desk Active
-                </span>
-                <h3 className="heading-section text-slate-900 dark:text-white mb-3">
-                  Ready to field your next study?
-                </h3>
-                <p className="body-base text-slate-600 dark:text-slate-400 max-w-xl">
-                  Partner with Elicit Research to access 5M+ verified global panelists,
-                  enterprise-grade survey engineering, and board-ready insights.
-                </p>
-              </div>
-              <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
-                <Link
-                  to="/contact?type=rfq"
-                  className="btn-primary justify-center py-3 sm:py-3.5"
-                >
-                  Request Project RFQ
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-                <button
-                  type="button"
-                  onClick={handleDownloadPanelBook}
-                  disabled={downloading}
-                  className="btn-secondary justify-center py-3 sm:py-3.5 disabled:opacity-60"
-                >
-                  <FileDown className="w-4 h-4 text-pink-600 dark:text-pink-400 shrink-0" />
-                  {downloading ? 'Compiling…' : 'Download Panel Book'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* ── Main footer grid ── */}
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 pt-14 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-14">
@@ -215,16 +174,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={handleDownloadPanelBook}
-                  className="text-left hover:text-slate-900 dark:hover:text-white"
-                  style={{ transition: 'color 0.15s ease' }}
-                >
-                  Download Panel Book
-                </button>
-              </li>
-              <li>
                 <a
                   href={COMPANY.panelPlatformUrl}
                   target="_blank"
@@ -289,12 +238,12 @@ export default function Footer() {
                     placeholder="name@company.com"
                     value={subEmail}
                     onChange={(e) => setSubEmail(e.target.value)}
-                    className="form-input py-2 text-xs"
+                    className="form-input py-2.5 text-xs min-h-[44px]"
                     aria-label="Email for newsletter"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 px-3 py-2 rounded-lg bg-gradient-to-r from-pink-600 to-rose-600 text-white text-xs font-semibold hover:from-pink-700 hover:to-rose-700 shadow-sm"
+                    className="shrink-0 px-4 py-2.5 rounded-lg bg-gradient-to-r from-pink-600 to-rose-600 text-white text-xs font-semibold hover:from-pink-700 hover:to-rose-700 shadow-sm min-h-[44px]"
                     style={{ transition: 'all 0.15s ease' }}
                   >
                     Join

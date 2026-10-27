@@ -164,102 +164,12 @@ export default function PanelPage() {
 
             <div className="relative h-[260px] overflow-hidden rounded-3xl border border-white/60 bg-slate-200 shadow-2xl shadow-purple-900/15 sm:h-[360px] lg:h-[430px] dark:border-white/10">
               <img
-                src="/images/Home/images5.webp"
+                src="/images/Home/media-generation-elicit-panel-more-different-0-d8a9513d-7713-40fa-bd1a-136e3097f756.webp"
                 alt="A diverse research team collaborating around a table"
                 className="h-full w-full object-cover object-center"
                 loading="eager"
                 fetchPriority="high"
               />
-
-              <div
-                className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent"
-                aria-hidden="true"
-              />
-
-              <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-slate-950/50 px-3 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-md sm:left-6 sm:top-6">
-                <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Global research network
-              </div>
-
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-slate-950/55 p-4 text-white shadow-xl backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-pink-200">
-                  One community · many perspectives
-                </p>
-
-                <p className="mt-2 text-lg font-extrabold sm:text-2xl">
-                  Real people. Reliable insights.
-                </p>
-
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {["B2B audiences", "B2C panels", "45+ countries"].map(
-                    (item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-medium text-white/90 sm:text-xs"
-                      >
-                        {item}
-                      </span>
-                    )
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ANALYTICS PREVIEW — SEPARATE FROM HERO */}
-      <section className="relative bg-slate-50 px-4 py-6 sm:px-6 sm:py-8 dark:bg-slate-950">
-        <div className="mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-slate-200/80 bg-white/75 text-left shadow-xl shadow-purple-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/70">
-
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200/80 bg-white/70 px-4 py-3 sm:px-6 sm:py-4 dark:border-white/10 dark:bg-white/[0.03]">
-            <div className="flex min-w-0 items-center gap-2">
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-rose-400 sm:h-3 sm:w-3" />
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-amber-400 sm:h-3 sm:w-3" />
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-400 sm:h-3 sm:w-3" />
-
-              <span className="ml-1 hidden truncate font-mono text-xs text-slate-500 sm:ml-2 sm:block dark:text-slate-400">
-                elicit-growth-telemetry.app — live analytics engine
-              </span>
-            </div>
-
-            <span className="inline-flex items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-2.5 py-2 text-[9px] font-bold uppercase tracking-wider text-emerald-700 sm:px-3 sm:text-[10px] dark:border-emerald-400/20 dark:bg-emerald-400/10 dark:text-emerald-300">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-              Live Feed Active
-            </span>
-          </div>
-
-          <div className="grid gap-3 bg-slate-50 p-3 sm:grid-cols-2 sm:gap-4 sm:p-5 md:p-6 dark:bg-white/[0.02]">
-            <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:gap-4 sm:p-5 dark:border-white/10 dark:bg-slate-800/80">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 sm:h-12 sm:w-12 dark:bg-emerald-400/10 dark:text-emerald-300">
-                <ArrowUpRight className="h-5 w-5 sm:h-6 sm:w-6" />
-              </div>
-
-              <div className="min-w-0">
-                <p className="text-[9px] font-bold uppercase tracking-widest text-emerald-600 sm:text-[10px] dark:text-emerald-300">
-                  Validated Increment
-                </p>
-
-                <p className="mt-1 text-lg font-extrabold leading-tight text-slate-900 sm:text-2xl dark:text-white">
-                  +184% Growth Surge
-                </p>
-              </div>
-            </div>
-
-            <div className="flex min-w-0 items-center gap-3 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm sm:gap-4 sm:p-5 dark:border-white/10 dark:bg-slate-800/80">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-pink-100 text-pink-600 sm:h-12 sm:w-12 dark:bg-pink-400/10 dark:text-pink-300">
-                <ClipboardCheck className="h-5 w-5 sm:h-6 sm:w-6" />
-              </div>
-
-              <div className="min-w-0">
-                <p className="text-[9px] font-bold uppercase tracking-widest text-pink-600 sm:text-[10px] dark:text-pink-300">
-                  Confidence Index
-                </p>
-
-                <p className="mt-1 text-lg font-extrabold leading-tight text-slate-900 sm:text-2xl dark:text-white">
-                  99.98% Clean Data
-                </p>
-              </div>
             </div>
           </div>
         </div>

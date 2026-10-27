@@ -13,19 +13,19 @@ export const HERO_IMAGES = {
   },
   // Full-bleed Intelligence at Scale banner
   intelligenceBanner: {
-    url: "/images/Home/photo-1504868584819-f8e8b4b6d7e3.webp",
+    url: "/images/Home/media-generation-elicit-services-hero-laptop-da-0-8e9535ce-e1b3-451e-bea4-5f2426d8c916.webp",
     alt: "Enterprise market research analytics and quantitative charts on display",
     credit: "Unsplash / Carlos Muza"
   },
   // Corporate architectural glass command center
   corporateGlass: {
-    url: "/images/Home/Gemini_Generated_Image_8g8fs48g8fs48g8f.webp",
+    url: "/images/Home/Gemini_Generated_Image_qi37yoqi37yoqi37.webp",
     alt: "Global corporate headquarters reflecting enterprise data scale and precision",
     credit: "Unsplash / Sean Pollock"
   },
   // Global digital network & connectivity
   globalNetwork: {
-    url: "/images/Home/photo-1451187580459-43490279c0fa (1).webp",
+    url: "/images/Home/media-generation-elicit-panel-more-different-0-d8a9513d-7713-40fa-bd1a-136e3097f756.webp",
     alt: "Global data network connectivity across 45+ international market jurisdictions",
     credit: "Unsplash / NASA"
   },
@@ -60,52 +60,52 @@ export const ADVANTAGE_IMAGES = {
 
 export const SERVICE_IMAGES = {
   "survey-programming": {
-    url: "/images/Home/image3.webp",
+    url: "/images/Home/media-generation-elicit-survey-programming-clea-0-612d6406-6f25-490f-a5a6-83b3486ea5a4.webp",
     alt: "Software engineer programming responsive survey instruments with complex validation logic",
     credit: "Unsplash / Markus Spiske"
   },
   "performance-tracking": {
-    url: "/images/Home/image2.webp",
+    url: "/images/Home/media-generation-elicit-performance-tracking-0-7f9edd26-06f0-4970-81c7-390e7671145b.webp",
     alt: "Senior insights consultant analyzing longitudinal brand tracking and campaign uplift data",
     credit: "Unsplash / Amy Hirschi"
   },
   "research-design": {
-    url: "/images/Home/Gemini_Generated_Image_nukg4dnukg4dnukg.webp",
+    url: "/images/Home/reserch.webp",
     alt: "Methodology architects developing rigorous probability sampling and questionnaire designs",
     credit: "Unsplash / Scott Graham"
   },
   "qualitative-research": {
-    url: "/images/Home/photo-1531482615713-2afd69097998.webp",
+    url: "/images/Home/Gemini_Generated_Image_a0t8nha0t8nha0t8.webp",
     alt: "Moderator conducting in-depth qualitative focus group with active participants",
     credit: "Unsplash / Wonderlane"
   },
   "customer-segmentation": {
-    url: "/images/Home/photo-1551288049-bebda4e38f71.webp",
+    url: "/images/Home/media-generation-elicit-customer-segmentation-0-0a542a19-de77-4596-a2a3-c4801ab06e9e.webp",
     alt: "Data scientist analyzing customer segmentation clusters and behavioral persona metrics",
     credit: "Unsplash / Luke Chesser"
   },
   "customer-journey": {
-    url: "/images/Home/photo-1552664730-d307ca884978.webp",
+    url: "/images/Home/media-generation-elicit-customer-journey-0-8ba508f0-4c39-446a-89a7-50cc65809766.webp",
     alt: "Experience research team mapping customer journey touchpoints and emotional friction gates",
     credit: "Unsplash / Jason Goodman"
   },
   "communication-strategy": {
-    url: "/images/Home/photo-1557804506-669a67965ba0.webp",
+    url: "/images/Home/commu.webp",
     alt: "Strategic boardroom presentation validating brand messaging and advertising copy resonance",
     credit: "Unsplash / Austin Distel"
   },
   "cultural-insights": {
-    url: "/images/Home/photo-1519085360753-af0119f7cbe7.webp",
+    url: "/images/Home/media-generation-elicit-cultural-insight-0-40bda467-e70c-46d8-b94c-ceb6a3e7455a.webp",
     alt: "Diverse international community reflecting global cultural perspectives and regional nuances",
     credit: "Unsplash / Duy Pham"
   },
   "b2b-strategies": {
-    url: "/images/Home/Gemini_Generated_Image_6p9ol56p9ol56p9o.webp",
+    url: "/images/Home/media-generation-elicit-b2b-strategies-0-c44984fb-252d-436e-9fb5-03e9a2fb4e29.webp",
     alt: "C-suite enterprise executives evaluating vendor procurement and B2B market entry strategies",
     credit: "Unsplash / Hunters Race"
   },
   "growth-strategy": {
-    url: "/images/Home/photo-1460925895917-afdab827c52f.webp",
+    url: "/images/Home/media-generation-elicit-growth-strategy-figure-0-2716e73a-7ec0-454e-8779-30f4a5baa4a5.webp",
     alt: "Corporate growth strategist examining total addressable market projections and commercial models",
     credit: "Unsplash / Carlos Muza"
   }
@@ -113,22 +113,22 @@ export const SERVICE_IMAGES = {
 
 export const ABOUT_IMAGES = {
   philosophyTeam: {
-    url: "/images/Home/Gemini_Generated_Image_opeoc1opeoc1opeo.webp",
+    url: "/images/Home/media-generation-elicit-verified-truth-research-0-b7bc59e9-8a5a-45b3-b990-93d1e1c17fbb.webp",
     alt: "Elicit Research consulting leaders and methodology scientists reviewing empirical research reports",
     credit: "Unsplash / Maranda Vandergriff"
   },
   leadershipGovernance: {
-    url: "/images/Home/Gemini_Generated_Image_wrxlq7wrxlq7wrxl.webp",
+    url: "/images/Home/senior.webp",
     alt: "Senior executive leader providing strategic direction and corporate governance",
     credit: "Unsplash / Christina @ wocintechchat.com"
   },
   scienceBoard: {
-    url: "/images/Home/Gemini_Generated_Image_wrxlq7wrxlq7wrxl.webp",
+    url: "/images/Home/global.webp",
     alt: "Methodology and Science Board analyzing empirical econometric and psychometric models",
     credit: "Unsplash / ThisisEngineering RAEng"
   },
   securityCommittee: {
-    url: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",
+    url: "/images/Home/media-generation-elicit-technology-data-securit-0-d4ff9ab4-3342-4513-8fca-9b8d66d869ba.webp",
     alt: "Technology and Data Security Committee managing SOC-2 and GDPR infrastructure",
     credit: "Unsplash / Markus Spiske"
   }
@@ -136,22 +136,22 @@ export const ABOUT_IMAGES = {
 
 export const HUB_CITY_IMAGES = {
   us: {
-    url: "/images/Home/photo-1496442226666-8d4d0e62e6e9-converted-from-avif.webp",
+    url: "/images/Home/new-york.webp",
     alt: "New York City One World Trade Center - North American headquarters",
     credit: "Unsplash / Oliver Niblett"
   },
   uk: {
-    url: "/images/Home/photo-1513635269975-59663e0ac1ad.webp",
+    url: "/images/Home/london.webp",
     alt: "London financial district and City of London - EMEA headquarters",
     credit: "Unsplash / Benjamin Davies"
   },
   asia: {
-    url: "/images/Home/Gemini_Generated_Image_tkqnpftkqnpftkqn.webp",
+    url: "/images/Home/singapore.webp",
     alt: "Singapore Marina Bay Financial Centre - Asia-Pacific headquarters",
     credit: "Unsplash / Swapnil Bapat"
   },
   india: {
-    url: "/images/Home/photo-1596176530529-78163a4f7af2.webp",
+    url: "/images/Home/banglore-office.webp",
     alt: "Bengaluru Technology Corridor - India engineering and sampling center",
     credit: "Unsplash / Naveen Saxena"
   }
@@ -211,12 +211,12 @@ export const PANEL_AUDIENCE_IMAGES = {
 
 export const CAREERS_IMAGES = {
   hero: {
-    url: "/images/Home/photo-1522071820081-009f0129c71c.webp",
+    url: "/images/Home/media-generation-elicit-girl-with-computer-fron-0-e2b6ffe6-50ef-4d45-9f9a-f9e0bfb4feac (1).webp",
     alt: "Collaborative and energetic culture at Elicit Research global hubs",
     credit: "Unsplash / Annie Spratt"
   },
   dataScience: {
-    url: "/images/Home/1f46bdee-5823-4b76-8d10-8abb3f175011.webp",
+    url: "/images/Home/media-generation-elicit-learning-development-0-63baa37f-2a55-4f92-8c13-4a05c5f85850.webp",
     alt: "Pioneering data science, fraud algorithms, and survey engineering workspace",
     credit: "Unsplash / Luke Chesser"
   },
@@ -226,7 +226,7 @@ export const CAREERS_IMAGES = {
     credit: "Unsplash / Campaign Creators"
   },
   flexibility: {
-    url: "/images/Home/photo-1521737711867-e3b97375f902 (1).webp",
+    url: "/images/Home/Gemini_Generated_Image_mani9lmani9lmani.webp",
     alt: "Global flexibility and inclusive remote-friendly culture across world hubs",
     credit: "Unsplash / Helena Lopes"
   }

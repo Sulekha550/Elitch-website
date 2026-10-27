@@ -14,104 +14,108 @@ export default function ContactPage() {
   return (
     <main className="relative w-full min-w-0 overflow-x-clip bg-slate-50 pt-24 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
 
-      {/* HERO — HOME PAGE LIGHT GRADIENT THEME */}
-      <section className="relative w-full overflow-hidden border-b border-slate-200/70 dark:border-white/[0.06]">
-        <div className="img-zoom-container relative min-h-[560px] w-full overflow-hidden">
+      {/* HERO — TWO-COLUMN PANEL LAYOUT */}
+      <section className="relative isolate w-full overflow-hidden border-b border-slate-200/70 dark:border-white/[0.06]">
 
-          <img
-            src={HERO_IMAGES.executiveConsulting.url}
-            alt={HERO_IMAGES.executiveConsulting.alt}
-            className="absolute inset-0 h-full min-h-[560px] w-full object-cover object-center"
-            loading="eager"
-            fetchPriority="high"
-          />
+        {/* Background glows */}
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute left-1/2 top-0 h-[400px] w-[min(1200px,120vw)] -translate-x-1/2 rounded-full bg-gradient-to-b from-pink-400/15 via-purple-400/10 to-transparent blur-3xl" />
+          <div className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-pink-400/15 blur-3xl" />
+          <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-rose-400/10 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-purple-400/10 blur-3xl" />
+        </div>
 
-          {/* Soft light overlay */}
-          <div className="absolute inset-0 bg-white/65 dark:bg-slate-950/75" />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-pink-50/75 to-rose-50/70 dark:from-slate-950/90 dark:via-purple-950/40 dark:to-slate-950/90" />
+        {/* Two-column grid */}
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-5 pt-24 sm:px-8 sm:pt-28 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:pt-32">
 
-          {/* Pink, purple and rose ambient glows */}
-          <div className="pointer-events-none absolute -left-24 top-0 h-96 w-96 rounded-full bg-pink-400/25 blur-3xl" />
-          <div className="pointer-events-none absolute left-1/3 top-10 h-96 w-96 rounded-full bg-purple-400/25 blur-3xl" />
-          <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-rose-400/20 blur-3xl" />
+          {/* LEFT COLUMN — all existing content */}
+          <div className="flex min-w-0 flex-col space-y-6">
 
-          {/* Hero content */}
-          <div className="relative z-10 flex min-h-[560px] items-center py-16">
-            <div className="section-container w-full">
-              <div className="max-w-3xl space-y-6">
+            {/* Breadcrumb */}
+            <nav
+              aria-label="Breadcrumb"
+              className="flex flex-wrap items-center gap-2 text-sm font-semibold"
+            >
+              <Link
+                to="/"
+                className="text-slate-700 transition-colors hover:text-pink-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 dark:text-slate-300 dark:hover:text-pink-400"
+              >
+                Home
+              </Link>
 
-                {/* Breadcrumb */}
-                <nav
-                  aria-label="Breadcrumb"
-                  className="flex flex-wrap items-center gap-2 text-sm font-semibold"
-                >
-                  <Link
-                    to="/"
-                    className="text-slate-700 transition-colors hover:text-pink-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500 dark:text-slate-300 dark:hover:text-pink-400"
-                  >
-                    Home
-                  </Link>
+              <span aria-hidden="true" className="text-slate-400">
+                /
+              </span>
 
-                  <span aria-hidden="true" className="text-slate-400">
-                    /
-                  </span>
+              <span className="rounded-lg border border-pink-300/60 bg-pink-100/80 px-2.5 py-1 text-xs font-semibold text-pink-800 dark:border-pink-400/30 dark:bg-pink-500/10 dark:text-pink-300">
+                Contact &amp; RFQ
+              </span>
+            </nav>
 
-                  <span className="rounded-lg border border-pink-300/60 bg-pink-100/80 px-2.5 py-1 text-xs font-semibold text-pink-800 dark:border-pink-400/30 dark:bg-pink-500/10 dark:text-pink-300">
-                    Contact &amp; RFQ
-                  </span>
-                </nav>
+            {/* Main heading */}
+            <h1 className="!text-2xl sm:!text-3xl md:!text-4xl xl:!text-[2.65rem] font-display font-extrabold leading-tight tracking-tight !text-slate-950 dark:!text-white overflow-visible">
+              <span className="block !text-slate-950 dark:!text-white py-1">
+                Initiate Project Bidding
+              </span>
 
-                {/* Main heading */}
-                <h1 className="!text-4xl font-display font-extrabold leading-tight tracking-tight !text-slate-950 sm:!text-5xl lg:!text-6xl dark:!text-white">
-                  <span className="block !text-slate-950 dark:!text-white">
-                    Initiate Project Bidding
-                  </span>
-
-                  <span className="mt-1 block bg-gradient-to-r from-pink-500 via-purple-500 to-rose-500 bg-clip-text text-transparent">
+<span className="mt-1 block bg-gradient-to-r from-pink-500 via-purple-500 to-rose-500 bg-clip-text text-transparent leading-tight py-1 pb-2">
                     Or Direct Inquiries.
                   </span>
-                </h1>
+            </h1>
 
-                {/* Description */}
-                <p className="max-w-2xl text-base font-medium leading-7 text-slate-600 sm:text-lg">
-                  Connect directly with our sampling directors, survey engineers,
-                  and bidding strategists. We operate 24/5 across New York,
-                  London, Singapore, and Bengaluru.
-                </p>
+            {/* Description */}
+            <p className="max-w-2xl text-base font-medium leading-7 text-slate-600 sm:text-lg dark:text-slate-300">
+              Connect directly with our sampling directors, survey engineers,
+              and bidding strategists. We operate 24/5 across New York,
+              London, Singapore, and Bengaluru.
+            </p>
 
-                {/* Feature pills */}
-                <div className="flex flex-wrap gap-3 pt-1">
-                  {[
-                    { label: 'RFQ & Pricing', icon: '📋' },
-                    { label: '2hr Response SLA', icon: '⚡' },
-                    { label: 'Global Operations', icon: '🌐' },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center gap-2 rounded-full border border-slate-200 bg-white/75 px-4 py-2 text-xs font-semibold text-slate-800 shadow-sm backdrop-blur-md transition-all hover:border-pink-300 hover:bg-pink-50"
-                    >
-                      <span>{item.icon}</span>
-                      <span>{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+{null}
 
-                {/* Proposal CTA */}
-                <div className="flex flex-wrap gap-4 pt-1">
-                  <a
-                    href={`mailto:${COMPANY.emails.rfq}`}
-                    className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-pink-500 hover:to-rose-500 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
-                  >
-                    Request a Proposal
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                  </a>
-                </div>
-
-              </div>
+            {/* Proposal CTA */}
+            <div className="flex flex-wrap gap-4 pt-1">
+              <a
+                href={`mailto:${COMPANY.emails.rfq}`}
+                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-pink-500 hover:to-rose-500 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+              >
+                Request a Proposal
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </a>
             </div>
+
           </div>
+
+          {/* RIGHT COLUMN — contact image */}
+          <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+            {/* Soft pink-purple glow behind image */}
+            <div
+              className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-pink-400/20 via-purple-400/15 to-rose-400/20 blur-2xl"
+              aria-hidden="true"
+            />
+
+            {/* Image container */}
+            <div className="relative overflow-hidden rounded-3xl border border-white/80 bg-slate-100 shadow-2xl shadow-purple-900/10 dark:border-white/10 dark:shadow-black/20">
+              <img
+                src="/images/Home/media-generation-elicit-contact-page-image-0-529c5343-7597-4923-a5af-830d0c4edc2e.webp"
+                alt="Elicit Research contact and consulting team"
+                className="h-full w-full object-cover object-center"
+                loading="eager"
+                fetchPriority="high"
+              />
+              {/* Subtle inner frame accent */}
+              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/20" />
+            </div>
+
+
+
+
+
+
+          </div>
+
         </div>
       </section>
+
 
       {/* CONTACT INFORMATION + RFQ FORM */}
       <section className="relative overflow-hidden bg-slate-50 py-12 dark:bg-slate-950 sm:py-16 lg:py-20">
@@ -127,13 +131,7 @@ export default function ContactPage() {
               {/* Primary Bidding Desk */}
               <article className="rounded-2xl border border-pink-200/70 bg-gradient-to-br from-pink-50 via-white to-purple-50 p-6 shadow-sm transition-all duration-300 hover:border-pink-300 hover:shadow-lg hover:shadow-pink-500/[0.06] dark:border-pink-400/20 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/40 sm:p-8">
                 <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-                  <p className="eyebrow !text-pink-700 dark:!text-pink-300">
-                    Primary Bidding Desk
-                  </p>
-
-                  <span className="rounded-full border border-pink-300/60 bg-pink-100 px-3 py-1 text-xs font-semibold text-pink-800 dark:border-pink-400/25 dark:bg-pink-500/10 dark:text-pink-300">
-                    2hr Response SLA
-                  </span>
+                  <div className="min-w-0" />
                 </div>
 
                 <h2 className="heading-card mb-2 !text-slate-900 dark:!text-white">

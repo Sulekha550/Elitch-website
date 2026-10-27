@@ -93,17 +93,14 @@ export default function ServicesPage() {
 
         {/* Full-size hero background */}
         <div className="absolute inset-0 h-full w-full overflow-hidden">
-
           <img
-            src={HERO_IMAGES?.intelligenceBanner?.url}
-            alt={
-              HERO_IMAGES?.intelligenceBanner?.alt ||
-              'Research and insights services'
-            }
+            src="/images/Home/media-generation-elicit-services-hero-laptop-da-0-8e9535ce-e1b3-451e-bea4-5f2426d8c916.webp"
+            alt="Research and insights services"
             className="absolute inset-0 h-full w-full object-cover object-center"
             loading="eager"
             fetchPriority="high"
           />
+        </div>
 
           {/* Readability overlay */}
           <div
@@ -125,7 +122,6 @@ export default function ServicesPage() {
               }}
             />
           </div>
-        </div>
 
         {/* Vertically centered hero content */}
         <div className="relative z-10 flex h-full w-full items-center">
@@ -156,7 +152,7 @@ export default function ServicesPage() {
               </nav>
 
               {/* Main heading */}
-              <h1 className="text-3xl font-display font-extrabold leading-[1.12] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl xl:text-6xl dark:text-white">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-[2.65rem] font-display font-extrabold leading-[1.12] tracking-tight text-slate-900 dark:text-white">
                 Precision Methodologies.
                 <br />
                 <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-rose-500 bg-clip-text text-transparent">

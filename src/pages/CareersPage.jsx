@@ -121,28 +121,30 @@ export default function CareersPage() {
 
   return (
     <main
-      className={`${pageTheme} relative isolate min-h-screen overflow-x-clip pt-24`}
+      className={`${pageTheme} relative isolate min-h-screen overflow-x-clip bg-slate-50 pt-24 text-slate-800 dark:bg-slate-950 dark:text-slate-100`}
       data-theme={isDark ? 'dark' : 'light'}
     >
-      {/* Ambient background glows */}
+      {/* Ambient background glows — soft, light-mode friendly */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-40 top-96 z-0 h-96 w-96 rounded-full bg-pink-300/30 blur-[120px] dark:bg-pink-500/10"
+        className="pointer-events-none absolute -left-40 top-96 z-0 h-96 w-96 rounded-full bg-pink-200/25 blur-[120px] dark:bg-pink-500/10"
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-[1000px] z-0 h-96 w-96 rounded-full bg-purple-300/30 blur-[120px] dark:bg-purple-500/10"
+        className="pointer-events-none absolute -right-40 top-[1000px] z-0 h-96 w-96 rounded-full bg-purple-200/25 blur-[120px] dark:bg-purple-500/10"
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -left-32 bottom-40 z-0 h-96 w-96 rounded-full bg-pink-300/20 blur-[120px] dark:bg-pink-500/10"
+        className="pointer-events-none absolute -left-32 bottom-40 z-0 h-96 w-96 rounded-full bg-pink-200/20 blur-[120px] dark:bg-pink-500/10"
       />
 
       {/* Hero */}
-      <section className="relative z-10 overflow-hidden border-b border-white/80 px-3 pb-3 dark:border-white/10 sm:px-5">
-        <div className="img-zoom-container group relative mx-auto h-[calc(100svh-6rem)] min-h-[600px] w-full max-w-[1600px] overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br from-pink-100 via-purple-100 to-rose-100 shadow-xl shadow-purple-900/5 dark:border-white/10 dark:from-pink-900/40 dark:via-purple-900/40 dark:to-rose-900/40 sm:min-h-[600px]">
+      <section className="relative w-full h-[calc(100svh-6rem)] min-h-[600px] overflow-hidden border-b border-slate-200/80 dark:border-white/5">
+
+        {/* Full-size hero background — woman with laptop visible on the right */}
+        <div className="absolute inset-0 h-full w-full overflow-hidden">
           <img
             src={CAREERS_IMAGES.hero.url}
             alt={CAREERS_IMAGES.hero.alt}
@@ -150,92 +152,88 @@ export default function CareersPage() {
             loading="eager"
             fetchPriority="high"
           />
+        </div>
 
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/60 to-slate-950/25" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-slate-950/10 to-transparent" />
+        {/* Readability overlay — matches Services page exactly */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/65 via-white/25 to-transparent dark:from-slate-950/75 dark:via-slate-950/35 dark:to-slate-950/10"
+          aria-hidden="true"
+        />
 
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-24 top-10 z-[1] h-80 w-80 rounded-full bg-pink-400/20 blur-[100px]"
-          />
-
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute right-0 top-1/4 z-[1] h-96 w-96 rounded-full bg-purple-400/20 blur-[120px]"
-          />
-
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -bottom-20 left-1/3 z-[1] h-80 w-80 rounded-full bg-rose-400/20 blur-[110px]"
-          />
+        {/* Ambient gradients — matches Services page */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-24 left-1/3 h-96 w-96 rounded-full bg-pink-500/10 blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-indigo-500/10 blur-3xl" />
 
           <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[2] opacity-[0.12]"
+            className="absolute inset-0 opacity-[0.04]"
             style={{
               backgroundImage:
-                'linear-gradient(rgba(255,255,255,.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.45) 1px, transparent 1px)',
-              backgroundSize: '64px 64px',
+                'linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
             }}
           />
+        </div>
 
-          <div className="relative z-10 flex h-full min-h-[600px] items-center sm:min-h-[600px]">
-            <div className="section-container w-full">
-              <div className="max-w-3xl space-y-6 pt-10">
-                <nav
-                  aria-label="Breadcrumb"
-                  className="flex items-center gap-2 text-sm font-medium text-slate-300"
+        {/* Vertically centered hero content */}
+        <div className="relative z-10 flex h-full w-full items-center">
+          <div className="mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
+            <div className="max-w-3xl space-y-6 sm:space-y-7">
+
+              {/* Breadcrumb */}
+              <nav
+                aria-label="Breadcrumb"
+                className="flex flex-wrap items-center gap-2 text-sm font-semibold"
+              >
+                <Link
+                  to="/"
+                  className="text-slate-700 transition-colors hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-300"
                 >
-                  <Link
-                    to="/"
-                    className="transition-colors duration-200 hover:text-white"
+                  Home
+                </Link>
+
+                <span className="text-slate-400" aria-hidden="true">
+                  /
+                </span>
+
+                <span className="rounded-lg border border-pink-200 bg-white/85 px-2.5 py-1 text-xs font-semibold text-pink-700 shadow-sm backdrop-blur-md dark:border-pink-800/50 dark:bg-pink-950/60 dark:text-pink-300">
+                  Careers
+                </span>
+              </nav>
+
+              {/* Main heading — dark navy + pink-purple gradient */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-[2.65rem] font-display font-extrabold leading-[1.12] tracking-tight text-slate-900 dark:text-white">
+                Grow Your Career.
+                <br />
+                <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-rose-500 bg-clip-text text-transparent">
+                  Grow With Elicit.
+                </span>
+              </h1>
+
+              {/* Description — readable slate body text */}
+              <p className="max-w-2xl text-base font-medium leading-relaxed text-slate-700 sm:text-lg dark:text-slate-300">
+                Discover opportunities to grow your career with Elicit
+                Research &amp; Insights Inc. Join a team that values
+                collaboration, learning, and meaningful work.
+              </p>
+
+              {/* Accent badges */}
+              <div className="flex flex-col items-start gap-3 pt-1 sm:flex-row sm:items-center sm:gap-4">
+                {[
+                  { label: 'Career Growth', icon: '🌱' },
+                  { label: 'Team Collaboration', icon: '🤝' },
+                  { label: 'New Opportunities', icon: '✨' },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-2 rounded-full border border-slate-200/80 bg-white/85 px-4 py-2 text-xs font-semibold text-slate-800 shadow-sm backdrop-blur-md dark:border-white/10 dark:bg-slate-900/80 dark:text-white"
                   >
-                    Home
-                  </Link>
-
-                  <span className="text-slate-500" aria-hidden="true">
-                    /
-                  </span>
-
-                  <span className="rounded-full border border-pink-300/30 bg-gradient-to-r from-pink-400/20 via-purple-400/20 to-rose-400/20 px-3 py-1 text-xs font-semibold text-pink-100 backdrop-blur-md">
-                    Careers
-                  </span>
-                </nav>
-
-                <h1 className="heading-hero">
-                  <span
-                    className="block text-white"
-                    style={{ textShadow: '0 2px 16px rgba(0,0,0,0.55)' }}
-                  >
-                    Careers
-                  </span>
-                  <span className="bg-gradient-to-r from-pink-300 via-purple-300 to-rose-300 bg-clip-text text-transparent">
-                    Grow With Elicit.
-                  </span>
-                </h1>
-
-                <p className="body-lg max-w-2xl text-slate-200">
-                  Discover opportunities to grow your career with Elicit
-                  Research &amp; Insights Inc. Join a team that values
-                  collaboration, learning, and meaningful work.
-                </p>
-
-                <div className="flex flex-wrap gap-3 pt-1">
-                  {[
-                    { label: 'Career Growth', icon: '🌱' },
-                    { label: 'Team Collaboration', icon: '🤝' },
-                    { label: 'New Opportunities', icon: '✨' },
-                  ].map((item) => (
-                    <div
-                      key={item.label}
-                      className="flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-xs font-medium text-white shadow-sm backdrop-blur-md transition-all duration-300 hover:border-pink-300/50 hover:bg-white/15"
-                    >
-                      <span>{item.icon}</span>
-                      <span>{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-pink-500" />
+                    <span>{item.icon} {item.label}</span>
+                  </div>
+                ))}
               </div>
+
             </div>
           </div>
         </div>
@@ -347,7 +345,7 @@ export default function CareersPage() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="mb-10 max-w-2xl sm:mb-12">
-            <span className="inline-flex items-center gap-2 rounded-full border border-purple-200/80 bg-white/70 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-purple-700 shadow-sm backdrop-blur-md dark:border-purple-400/20 dark:bg-purple-400/[0.06] dark:text-purple-400">
+            <span className="inline-flex items-center gap-2 rounded-full border border-purple-200/80 bg-white/70 px-3 py-1.5 text-xs font-semibold tracking-widest text-purple-700 shadow-sm backdrop-blur-md dark:border-purple-400/20 dark:bg-purple-400/[0.06] dark:text-purple-400">
               <Briefcase size={13} />
               Current Openings
             </span>
@@ -369,7 +367,7 @@ export default function CareersPage() {
                   <article className="group flex flex-col justify-between gap-6 rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_12px_40px_rgba(15,23,42,0.05)] transition-all duration-300 hover:border-pink-200 hover:shadow-[0_20px_55px_rgba(244,63,94,0.12)] dark:border-white/10 dark:bg-slate-900/90 dark:hover:border-pink-400/30 sm:p-8 md:flex-row md:items-center">
                     <div className="space-y-3">
                       <div className="flex flex-wrap items-center gap-3">
-                        <span className="rounded-full border border-pink-200 bg-pink-50 px-3 py-1 text-[11px] font-semibold text-pink-800 dark:border-pink-400/20 dark:bg-pink-400/[0.08] dark:text-pink-300">
+                        <span className="rounded-full border border-pink-200 bg-pink-50 px-3 py-1 text-[12px] font-semibold text-pink-800 dark:border-pink-400/20 dark:bg-pink-400/[0.08] dark:text-pink-300">
                           {job.department}
                         </span>
 

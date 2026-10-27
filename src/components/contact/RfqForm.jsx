@@ -73,7 +73,7 @@ export default function RfqForm({ initialType = 'rfq' }) {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
-          <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">
+          <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white">
             Contact Us
           </h3>
 

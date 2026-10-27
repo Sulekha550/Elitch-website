@@ -135,13 +135,13 @@ function FounderCard({ founder }) {
 
   return (
     <article className="group relative isolate overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_42px_rgba(15,23,42,0.07)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(18,107,137,0.13)] dark:border-white/10 dark:bg-slate-900">
-      <div className="h-1 w-full bg-gradient-to-r from-[#ff6900] via-[#f58a32] to-[#126b89]" />
+      <div className="h-1 w-full bg-gradient-to-r from-[#ec4899] via-[#f472b6] to-[#126b89]" />
 
       <div className="grid grid-cols-1 gap-0 md:grid-cols-[0.78fr_1.22fr] lg:grid-cols-[0.82fr_1.18fr]">
         {/* Layered portrait area */}
         <div className="relative min-h-[320px] overflow-hidden bg-[#eaf3f6] p-7 sm:min-h-[380px] md:min-h-[430px] md:p-8 lg:min-h-[455px] dark:bg-slate-800">
           <div aria-hidden="true" className="absolute inset-y-0 left-0 w-[72%] bg-gradient-to-br from-[#dceef2] via-[#eaf3f6] to-[#cce5eb] dark:from-slate-700 dark:via-slate-800 dark:to-slate-900" />
-          <div aria-hidden="true" className="absolute left-[17%] top-[11%] h-[78%] w-[78%] border-[4px] border-[#ff6900]" />
+          <div aria-hidden="true" className="absolute left-[17%] top-[11%] h-[78%] w-[78%] border-[4px] border-[#ec4899]" />
           <div aria-hidden="true" className="absolute bottom-[5%] left-[5%] h-[82%] w-[77%] bg-[#d7e9ee] dark:bg-slate-700" />
 
           <div className="absolute inset-x-8 bottom-8 top-8 overflow-hidden bg-[#e7efff] shadow-[0_14px_35px_rgba(15,23,42,0.12)] dark:bg-slate-700">
@@ -155,8 +155,8 @@ function FounderCard({ founder }) {
             ) : (
               <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-gradient-to-br from-[#eaf3fd] via-[#f8fbff] to-[#d8eaf0] dark:from-slate-800 dark:via-slate-700 dark:to-slate-900">
                 <div aria-hidden="true" className="absolute -left-10 -top-10 h-40 w-40 rounded-full border border-[#126b89]/25" />
-                <div aria-hidden="true" className="absolute -bottom-12 -right-8 h-48 w-48 rounded-full border border-[#ff6900]/30" />
-                <div aria-hidden="true" className="absolute bottom-10 left-8 h-24 w-24 rounded-full bg-[#ff6900]/15 blur-2xl" />
+                <div aria-hidden="true" className="absolute -bottom-12 -right-8 h-48 w-48 rounded-full border border-[#ec4899]/30" />
+                <div aria-hidden="true" className="absolute bottom-10 left-8 h-24 w-24 rounded-full bg-[#ec4899]/15 blur-2xl" />
                 <Users size={66} strokeWidth={1.1} className="relative text-pink-600/60 dark:text-pink-300/60" />
                 <span className="absolute bottom-5 rounded-full border border-[#126b89]/20 bg-white/75 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-pink-600 dark:border-white/10 dark:bg-slate-900/70 dark:text-sky-200">
                   Profile photo coming soon
@@ -173,14 +173,14 @@ function FounderCard({ founder }) {
 
           <div className="absolute bottom-5 left-5 right-5 z-10 flex items-center justify-between gap-3">
             <span className="rounded-md bg-[#126b89] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-white shadow-md">Leadership</span>
-            <span className="h-1 w-12 rounded-full bg-[#ff6900]" />
+            <span className="h-1 w-12 rounded-full bg-[#ec4899]" />
           </div>
         </div>
 
         {/* Profile information */}
         <div className="flex flex-col justify-center p-5 sm:p-7 lg:p-9 xl:p-10">
           <div className="mb-3 flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#ff6900]" />
+            <span className="h-2 w-2 rounded-full bg-[#ec4899]" />
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink-600 dark:text-pink-300 sm:text-xs">Leadership &amp; Vision</p>
           </div>
 
@@ -197,11 +197,11 @@ function FounderCard({ founder }) {
                 <div
                   key={detail.title}
                   className={`flex min-h-[96px] items-start gap-3 rounded-xl border p-3.5 transition-all duration-300 hover:-translate-y-0.5 sm:p-4 ${warm
-                      ? "border-orange-200 bg-[#fff7ec] hover:border-[#ff6900]/60 dark:border-orange-300/20 dark:bg-orange-400/[0.06]"
+                      ? "border-pink-200 bg-pink-50 hover:border-[#ec4899]/60 dark:border-pink-300/20 dark:bg-pink-400/[0.06]"
                       : "border-pink-200 bg-pink-50 hover:border-pink-500/50 dark:border-pink-300/20 dark:bg-pink-400/[0.06]"
                     }`}
                 >
-                  <Icon size={21} strokeWidth={1.9} className={`mt-0.5 shrink-0 ${warm ? "text-[#ff6900]" : "text-[#2583a0] dark:text-pink-300"}`} />
+                  <Icon size={21} strokeWidth={1.9} className={`mt-0.5 shrink-0 ${warm ? "text-[#ec4899]" : "text-pink-600 dark:text-pink-300"}`} />
                   <div className="min-w-0">
                     <h4 className="text-sm font-semibold text-slate-800 dark:text-slate-100">{detail.title}</h4>
                     <p className="mt-1 text-xs leading-5 text-slate-600 sm:text-[13px] dark:text-slate-300">{detail.description}</p>
@@ -215,7 +215,7 @@ function FounderCard({ founder }) {
             <p className="mb-2 text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Areas of Expertise</p>
             <div className="flex flex-wrap gap-2">
               {founder.expertise.map((skill) => (
-                <span key={skill} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-semibold text-slate-700 transition-colors duration-300 group-hover:border-orange-200 group-hover:bg-orange-50 sm:text-xs dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300 dark:group-hover:border-orange-400/30 dark:group-hover:bg-orange-400/[0.06]">
+                <span key={skill} className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-semibold text-slate-700 transition-colors duration-300 group-hover:border-pink-200 group-hover:bg-pink-50 sm:text-xs dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-300 dark:group-hover:border-pink-400/30 dark:group-hover:bg-pink-400/[0.06]">
                   {skill}
                 </span>
               ))}
@@ -264,115 +264,115 @@ export default function AboutPage() {
 
       {/* HERO SECTION */}
 
-      <section className="relative z-10 w-full overflow-hidden border-b border-slate-200/80 px-3 pb-3 dark:border-white/10 sm:px-5">
-        <div className="img-zoom-container group relative mx-auto min-h-[600px] w-full max-w-[1600px] overflow-visible rounded-3xl border border-slate-200/80 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900/90 sm:min-h-[600px] lg:min-h-[600px] h-[calc(100svh-6rem)]">
-          <img
-            src={HERO_IMAGES.corporateGlass.url}
-            alt={HERO_IMAGES.corporateGlass.alt}
-            className="absolute inset-0 h-full w-full object-cover object-center"
-            loading="eager"
-            fetchPriority="high"
-          />
+      <section
+        className="relative isolate flex min-h-[100vh] min-h-[100svh] w-full flex-col justify-start overflow-hidden border-b border-slate-200/80 dark:border-white/5"
+        style={{
+          paddingTop: "clamp(3rem, 4vh, 4rem)",
+          paddingBottom: "clamp(2rem, 4vh, 3rem)",
+        }}
+      >
+        {/* Background glows and gradient */}
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute left-1/2 top-0 h-[420px] w-[min(1200px,120vw)] -translate-x-1/2 rounded-full bg-gradient-to-b from-pink-500/20 via-purple-500/15 to-transparent blur-3xl sm:h-[600px]" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/45 to-slate-950/15" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-slate-950/10 to-transparent" />
+          <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-purple-400/10 blur-3xl sm:right-1/4" />
 
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -left-24 top-10 z-[1] h-80 w-80 rounded-full bg-pink-400/20 blur-[100px]"
-          />
+          <div className="absolute -left-20 -top-20 h-72 w-72 rounded-full bg-pink-500/15 blur-3xl sm:left-1/4" />
 
           <div
-            aria-hidden="true"
-            className="pointer-events-none absolute right-0 top-1/4 z-[1] h-96 w-96 rounded-full bg-purple-400/20 blur-[120px]"
-          />
-
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -bottom-20 left-1/3 z-[1] h-80 w-80 rounded-full bg-indigo-500/10 blur-[110px]"
-          />
-
-          {/* Fine Grid */}
-
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[2] opacity-[0.12]"
+            className="absolute inset-0 opacity-[0.03]"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(255,255,255,.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.45) 1px, transparent 1px)",
-              backgroundSize: "64px 64px",
+                "linear-gradient(rgba(236,72,153,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(168,85,247,.06) 1px, transparent 1px)",
+              backgroundSize: "40px 40px",
             }}
           />
+        </div>
 
-          {/* Decorative Particles */}
+        {/* Hero content grid */}
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 py-5 sm:px-8 sm:py-6 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-4">
 
-          <span className="absolute left-[12%] top-[25%] z-[2] h-2 w-2 rounded-full bg-pink-300/80 shadow-[0_0_16px_rgba(236,72,153,0.55)]" />
+          {/* LEFT COLUMN */}
+          <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left">
 
-          <span className="absolute right-[18%] top-[20%] z-[2] h-2 w-2 rounded-full bg-purple-300/80 shadow-[0_0_16px_rgba(168,85,247,0.55)]" />
+            {/* Breadcrumb */}
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-5 flex items-center gap-3 text-sm sm:mb-6"
+            >
+              <Link
+                to="/"
+                className="text-slate-700 transition-colors hover:text-pink-600 dark:text-slate-300 dark:hover:text-pink-300"
+              >
+                Home
+              </Link>
 
-          <span className="absolute bottom-[25%] left-[45%] z-[2] h-2 w-2 rounded-full bg-pink-400/80 shadow-[0_0_16px_rgba(236,72,153,0.55)]" />
+              <span className="text-pink-500">/</span>
 
-          <div className="relative z-10 flex h-full min-h-[600px] items-center sm:min-h-[600px] lg:min-h-[600px]">
-            <div className="section-container w-full">
-              <div className="max-w-4xl space-y-5 pt-6 sm:space-y-6">
-                <nav
-                  aria-label="Breadcrumb"
-                  className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-200"
-                >
-                  <Link
-                    to="/"
-                    className="!text-slate-200 transition hover:!text-white"
-                  >
-                    Home
-                  </Link>
+              <span className="rounded-full border border-pink-200 bg-white/80 px-4 py-2 font-semibold text-pink-700 shadow-sm backdrop-blur-md dark:border-pink-800/50 dark:bg-pink-950/60 dark:text-pink-300">
+                About Us
+              </span>
+            </nav>
 
-                  <span aria-hidden="true" className="text-slate-400">
-                    /
-                  </span>
+            {/* Eyebrow badge */}
+            <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-pink-200 bg-white/60 px-3 py-2.5 shadow-sm backdrop-blur-md sm:mb-6 sm:px-4 sm:py-3 dark:border-pink-400/20 dark:bg-white/5">
+              <Sparkles size={13} className="text-pink-600 dark:text-pink-300" />
+              <span className="text-[9px] font-bold uppercase leading-relaxed tracking-[0.12em] text-slate-700 sm:text-xs sm:tracking-[0.18em] dark:text-slate-200">
+                Research. Intelligence. Impact.
+              </span>
+            </div>
 
-                  <span className="rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[11px] !text-white backdrop-blur-md">
-                    About Us
-                  </span>
-                </nav>
+            {/* Main heading — dark navy + pink-purple gradient */}
+            <h1 className="max-w-3xl text-3xl font-extrabold leading-[1.2] tracking-tight text-slate-900 sm:text-4xl lg:text-5xl dark:text-white">
+              Data Precision Meets
+              <span className="mt-2 block bg-gradient-to-r from-pink-500 via-purple-500 to-rose-500 bg-clip-text text-transparent">
+                Global Intelligence.
+              </span>
+            </h1>
 
-                <div className="inline-flex items-center gap-2 rounded-full border border-pink-300/30 bg-pink-400/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] !text-pink-200 backdrop-blur-md sm:text-xs">
-                  <Sparkles size={13} />
-                  Research. Intelligence. Impact.
-                </div>
+            {/* Description — readable slate body text */}
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 sm:mt-5 sm:text-lg dark:text-slate-300">
+              Elicit Research &amp; Insights Inc. — delivering precision research,
+              data intelligence, and strategic insights across global markets.
+            </p>
 
-                <h1 className="!text-white text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-                  <span className="!text-white">Data Precision Meets</span>
-                  <br />
-                  <span className={THEME.gradient}>
-                    Global Intelligence.
-                  </span>
-                </h1>
+            {/* CTA buttons */}
+            <div className="mt-6 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-7 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
+              <a
+                href="#founders"
+                className="group/button inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-pink-600 via-rose-600 to-purple-600 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/25 sm:px-6 sm:py-4"
+              >
+                Meet Our Founders
+                <ArrowUpRight className="h-5 w-5 transition-transform group-hover/button:translate-x-1 group-hover/button:-translate-y-1" />
+              </a>
 
-                <p className="!text-slate-200 max-w-2xl text-sm leading-6 sm:text-base sm:leading-7">
-                  {COMPANY.name} is a global market research and information
-                  technology solutions company. We bridge the gap between
-                  complex consumer behaviors and high-stakes executive
-                  strategy through verified sampling, robust survey
-                  engineering, and empirical data science.
-                </p>
+              <a
+                href="#our-philosophy"
+                className="group inline-flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white/75 px-5 py-3.5 text-sm font-bold text-slate-700 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-pink-200 hover:bg-white sm:px-6 sm:py-4 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+              >
+                <span className="h-2 w-2 shrink-0 rounded-full bg-pink-500" />
+                Discover Our Approach
+                <ArrowUpRight className="h-5 w-5 text-purple-500 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </a>
+            </div>
 
-                <div className="flex flex-wrap gap-3 pt-1">
-                  <a
-                    href="#founders"
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-4 py-3 text-xs font-bold !text-white shadow-lg shadow-pink-600/25 transition hover:-translate-y-0.5 hover:from-pink-700 hover:to-rose-700 hover:shadow-xl sm:px-5 sm:text-sm"
-                  >
-                    Meet Our Founders
-                    <ArrowUpRight size={15} />
-                  </a>
+          </div>
 
-                  <a
-                    href="#our-philosophy"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-4 py-3 text-xs font-semibold !text-white backdrop-blur-md transition hover:border-pink-300/50 hover:bg-white/20 sm:px-5 sm:text-sm"
-                  >
-                    Discover Our Approach
-                  </a>
-                </div>
-              </div>
+          {/* RIGHT COLUMN — HERO IMAGE */}
+          <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+            <div
+              className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-pink-500/25 via-purple-500/20 to-rose-500/20 blur-2xl"
+              aria-hidden="true"
+            />
+
+            <div className="relative h-[260px] overflow-hidden rounded-3xl border border-white/60 bg-slate-200 shadow-2xl shadow-purple-900/15 sm:h-[360px] lg:h-[430px] dark:border-white/10">
+              <img
+                src="/images/Home/media-generation-elicit-trust-other-image-white-0-ee14d1b0-a60a-4dd2-975d-ce17461a7287.webp"
+                alt={HERO_IMAGES.corporateGlass.alt}
+                className="h-full w-full object-cover object-center"
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
           </div>
         </div>
@@ -422,7 +422,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative z-10 space-y-5">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink-600 sm:text-xs dark:text-pink-400">
+              <p className="text-[10px] font-bold tracking-[0.2em] text-pink-600 sm:text-xs dark:text-pink-400">
                 Our Research Philosophy
               </p>
 
@@ -576,7 +576,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="img-zoom-container relative overflow-hidden rounded-2xl border border-white/70 shadow-xl shadow-purple-900/10 dark:border-white/10 dark:shadow-black/20">
                 <img
-                  src={HERO_IMAGES.corporateGlass.url}
+                  src="/images/Home/elicit-trust-different-handshake-clean.webp"
                   alt={HERO_IMAGES.corporateGlass.alt}
                   className="h-[280px] w-full object-cover sm:h-[360px] lg:h-[400px]"
                   loading="lazy"
@@ -584,21 +584,6 @@ export default function AboutPage() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-                  <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[10px] font-semibold !text-pink-200 backdrop-blur sm:text-xs">
-                    <ShieldCheck size={13} />
-                    Quality & Governance
-                  </div>
-
-                  <h3 className="max-w-md text-xl font-bold leading-tight !text-white sm:text-2xl">
-                    Research You Can Build Decisions On.
-                  </h3>
-
-                  <p className="mt-2 max-w-md text-xs leading-5 !text-slate-200 sm:text-sm sm:leading-6">
-                    Structured processes, quality-focused execution, and
-                    responsible research practices.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -663,7 +648,7 @@ export default function AboutPage() {
         <div className="section-container relative z-10">
           <div className="mb-9 flex flex-col gap-5 md:mb-12 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
-              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff6900] sm:text-xs dark:text-orange-300">
+              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ec4899] sm:text-xs dark:text-pink-300">
                 The People Behind Our Vision
               </p>
 
@@ -743,7 +728,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="absolute bottom-3 left-3">
-                      <span className="rounded-md border border-white/20 bg-black/60 px-2.5 py-1 text-[10px] font-semibold text-pink-200 backdrop-blur">
+                      <span className="rounded-md border border-white/20 bg-black/60 px-2.5 py-1 text-[12px] font-semibold text-pink-200 backdrop-blur">
                         {group.role}
                       </span>
                     </div>
