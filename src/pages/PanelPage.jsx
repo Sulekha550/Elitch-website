@@ -80,7 +80,7 @@ export default function PanelPage() {
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 py-5 sm:px-8 sm:py-6 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-4">
 
           {/* LEFT COLUMN */}
-          <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left">
+          <div className="flex min-w-0 flex-col items-center text-center order-1 md:order-2 lg:order-1 lg:items-start lg:text-left">
 
             {/* Breadcrumb */}
             <nav
@@ -126,7 +126,7 @@ export default function PanelPage() {
             </p>
 
             {/* Buttons */}
-            <div className="mt-6 flex w-full flex-col items-stretch justify-center gap-3 sm:mt-7 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
+            <div className="hidden md:flex mt-6 w-full flex-col items-stretch justify-center gap-3 sm:mt-7 sm:w-auto sm:flex-row sm:items-center sm:gap-4">
               <Link
                 to="/contact"
                 className="group/button inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-pink-600 via-rose-600 to-purple-600 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/25 sm:px-6 sm:py-4"
@@ -156,7 +156,7 @@ export default function PanelPage() {
           </div>
 
           {/* RIGHT COLUMN — HERO IMAGE */}
-          <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+          <div className="relative order-2 md:order-1 lg:order-2 mx-auto w-full max-w-xl lg:max-w-none">
             <div
               className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-pink-500/25 via-purple-500/20 to-cyan-400/20 blur-2xl"
               aria-hidden="true"
@@ -171,6 +171,24 @@ export default function PanelPage() {
                 fetchPriority="high"
               />
             </div>
+          </div>
+
+          <div className="order-3 mt-6 flex w-full flex-col items-stretch justify-center gap-3 md:hidden sm:mt-7">
+            <Link
+              to="/contact"
+              className="group/button inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-pink-600 via-rose-600 to-purple-600 px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-pink-500/25 sm:px-6 sm:py-4"
+            >
+              Connect With Our Team
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover/button:translate-x-1 group-hover/button:-translate-y-1" />
+            </Link>
+
+            <a
+              href="#panel-overview"
+              className="group inline-flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white/75 px-5 py-3.5 text-sm font-bold text-slate-700 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-pink-200 hover:bg-white sm:px-6 sm:py-4 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+            >
+              Explore Our Panel
+              <ArrowUpRight className="h-5 w-5 text-purple-500 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
           </div>
         </div>
       </section>

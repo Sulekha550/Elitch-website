@@ -121,7 +121,7 @@ export default function CareersPage() {
 
   return (
     <main
-      className={`${pageTheme} relative isolate min-h-screen overflow-x-clip bg-slate-50 pt-24 text-slate-800 dark:bg-slate-950 dark:text-slate-100`}
+      className={`${pageTheme} relative isolate min-h-screen overflow-x-clip bg-slate-50 pt-16 text-slate-800 sm:pt-24 dark:bg-slate-950 dark:text-slate-100`}
       data-theme={isDark ? 'dark' : 'light'}
     >
       {/* Ambient background glows — soft, light-mode friendly */}
@@ -141,7 +141,7 @@ export default function CareersPage() {
       />
 
       {/* Hero */}
-      <section className="relative w-full h-[calc(100svh-6rem)] min-h-[600px] overflow-hidden border-b border-slate-200/80 dark:border-white/5">
+      <section className="relative w-full min-h-[60vh] h-[calc(100svh-6rem)] overflow-hidden border-b border-slate-200/80 dark:border-white/5 md:min-h-[600px]">
 
         {/* Full-size hero background — woman with laptop visible on the right */}
         <div className="absolute inset-0 h-full w-full overflow-hidden">

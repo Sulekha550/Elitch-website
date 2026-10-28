@@ -42,6 +42,7 @@ import MethodologyFlow from '../components/home/MethodologyFlow';
 import Hero3DScene from '../components/home/Hero3DScene';
 import RfqForm from '../components/contact/RfqForm';
 import ScrollReveal from '../components/common/ScrollReveal';
+import CountUp from '../components/common/CountUp';
 import { COMPANY } from '../data/companyData';
 import { HUB_CITY_IMAGES } from '../data/imageAssets';
 
@@ -109,50 +110,37 @@ export default function HomePage() {
                 </p>
               </ScrollReveal>
 
-              {/* Primary CTAs */}
-              <ScrollReveal animation="fade-up" delay={300} duration={650}>
-                <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4">
-                  <a
-                    href="#rfq-section"
-                    className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 shadow-md sm:shadow-lg shadow-pink-600/20 hover:shadow-xl transition-all duration-300 transform active:scale-95 text-center"
-                  >
-                    <span>Let's Discuss Your Project</span>
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </a>
+              {/* Desktop-only: Primary CTAs + Trust Bar (hidden on mobile) */}
+              <div className="hidden lg:block">
+                {/* Primary CTAs */}
+                <ScrollReveal animation="fade-up" delay={300} duration={650}>
+                  <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                    <a
+                      href="#rfq-section"
+                      className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 shadow-md sm:shadow-lg shadow-pink-600/20 hover:shadow-xl transition-all duration-300 transform active:scale-95 text-center"
+                    >
+                      <span>Let's Discuss Your Project</span>
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </a>
 
-                  <a
-                    href="#services-section"
-                    className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 backdrop-blur-md transition-all duration-300 shadow-xs text-center"
-                  >
-                    <span>Explore Our Services</span>
-                    <ArrowUpRight className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                  </a>
-                </div>
-              </ScrollReveal>
+                    <a
+                      href="#services-section"
+                      className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 backdrop-blur-md transition-all duration-300 shadow-xs text-center"
+                    >
+                      <span>Explore Our Services</span>
+                      <ArrowUpRight className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                    </a>
+                  </div>
+                </ScrollReveal>
 
-              {/* Verified Trust Standards Bar */}
-              <ScrollReveal animation="fade-up" delay={380} duration={650}>
-                <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-x-4 sm:gap-x-7 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
-                  <span className="inline-flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
-                    ESOMAR 28 Compliant
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
-                    Triple-Layer Fraud Scrubbing
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
-                    &lt; 2-Hour Bidding Response
-                  </span>
-                </div>
-              </ScrollReveal>
+{null}
+              </div>
 
             </div>
             {/* ── END LEFT ── */}
 
             {/* ── RIGHT: Hero Image (light & colorful) ── */}
-            <ScrollReveal animation="fade-up" delay={200} duration={900}>
+             <ScrollReveal animation="fade-up" delay={200} duration={900}>
               <div className="relative flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
                 <div className="relative w-full max-w-[580px] lg:max-w-none">
                   <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl ring-1 ring-pink-200/40 dark:ring-pink-500/20"
@@ -171,6 +159,27 @@ export default function HomePage() {
               </div>
             </ScrollReveal>
             {/* ── END RIGHT ── */}
+
+            {/* Mobile-only: stacked full-width CTAs + compliance badges (hidden on lg+) */}
+            <div className="lg:hidden flex flex-col items-center gap-4 mt-6">
+              <div className="flex flex-col w-full max-w-sm gap-3">
+                 <a
+                   href="#rfq-section"
+                   className="group inline-flex w-full items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-pink-600 to-rose-600 hover:from-pink-700 hover:to-rose-700 shadow-md sm:shadow-lg shadow-pink-600/20 hover:shadow-xl transition-all duration-300 transform active:scale-95 text-center"
+                >
+                  <span>Let's Discuss Your Project</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </a>
+                 <a
+                   href="#services-section"
+                   className="inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 backdrop-blur-md transition-all duration-300 shadow-xs text-center"
+                >
+                  <span>Explore Our Services</span>
+                  <ArrowUpRight className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                </a>
+              </div>
+              {null}
+            </div>
 
           </div>
         </div>
@@ -214,7 +223,7 @@ export default function HomePage() {
                   {/* Card 1: 60+ Clients (Teal Card) */}
                   <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg sm:shadow-xl shadow-teal-500/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[130px] sm:min-h-[150px]">
                     <div className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-                      60+
+                      <CountUp value="60+" />
                     </div>
                     <div>
                       <span className="text-sm sm:text-base font-bold block">Clients</span>
@@ -225,7 +234,7 @@ export default function HomePage() {
                   {/* Card 2: 30+ Countries (Blue Card) */}
                   <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg sm:shadow-xl shadow-blue-500/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[130px] sm:min-h-[150px]">
                     <div className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-                      30+
+                      <CountUp value="30+" />
                     </div>
                     <div>
                       <span className="text-sm sm:text-base font-bold block">Countries</span>
@@ -236,7 +245,7 @@ export default function HomePage() {
                   {/* Card 3: 130+ Experts (Pink/Magenta Card) */}
                   <div className="sm:col-span-2 lg:col-span-2 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-pink-600 to-rose-600 text-white shadow-lg sm:shadow-xl shadow-pink-500/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[130px] sm:min-h-[150px]">
                     <div className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-                      130+
+                      <CountUp value="130+" />
                     </div>
                     <div>
                       <span className="text-sm sm:text-base font-bold block">Experts</span>

@@ -136,11 +136,7 @@ export default function Navbar() {
       <div className="hidden lg:block border-b border-slate-100 dark:border-white/[0.05] pb-2 mb-2.5">
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-5">
-            <span className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-status-pulse" />
-              Global Sampling Engine — 45+ Countries
-            </span>
-          </div>
+            </div>
           <div className="flex items-center gap-5">
             <a
               href={`mailto:${COMPANY.emails.rfq}`}
@@ -365,9 +361,7 @@ export default function Navbar() {
                         {link.badge}
                       </span>
                     )}
-                    {link.hiring && (
-                      <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                    )}
+                    {null}
                     {link.hasDropdown && (
                       <ChevronDown className="w-4 h-4 text-slate-400" />
                     )}

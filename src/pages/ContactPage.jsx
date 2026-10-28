@@ -12,7 +12,7 @@ export default function ContactPage() {
   const initialType = searchParams.get('type') || 'rfq';
 
   return (
-    <main className="relative w-full min-w-0 overflow-x-clip bg-slate-50 pt-24 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <main className="relative w-full min-w-0 overflow-x-clip bg-slate-50 pt-16 text-slate-800 dark:bg-slate-950 dark:text-slate-100 sm:pt-24">
 
       {/* HERO — TWO-COLUMN PANEL LAYOUT */}
       <section className="relative isolate w-full overflow-hidden border-b border-slate-200/70 dark:border-white/[0.06]">
@@ -29,7 +29,7 @@ export default function ContactPage() {
         <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-5 pt-24 sm:px-8 sm:pt-28 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:pt-32">
 
           {/* LEFT COLUMN — all existing content */}
-          <div className="flex min-w-0 flex-col space-y-6">
+          <div className="flex min-w-0 flex-col space-y-6 order-1 lg:order-1">
 
             {/* Breadcrumb */}
             <nav
@@ -70,13 +70,11 @@ export default function ContactPage() {
               London, Singapore, and Bengaluru.
             </p>
 
-{null}
-
-            {/* Proposal CTA */}
-            <div className="flex flex-wrap gap-4 pt-1">
+{/* Proposal CTA (desktop/tablet) */}
+            <div className="hidden lg:flex flex-wrap gap-4 pt-1">
               <a
                 href={`mailto:${COMPANY.emails.rfq}`}
-                className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-pink-500 hover:to-rose-500 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+                className="group inline-flex w-full min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-pink-500 hover:to-rose-500 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
               >
                 Request a Proposal
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -86,7 +84,7 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT COLUMN — contact image */}
-          <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+          <div className="relative order-2 lg:order-2 mx-auto w-full max-w-xl lg:max-w-none">
             {/* Soft pink-purple glow behind image */}
             <div
               className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-pink-400/20 via-purple-400/15 to-rose-400/20 blur-2xl"
@@ -108,9 +106,17 @@ export default function ContactPage() {
 
 
 
+          </div>
 
-
-
+          {/* Mobile-only CTA (stacked full-width) */}
+          <div className="order-3 flex flex-col gap-4 pt-1 lg:hidden">
+            <a
+              href={`mailto:${COMPANY.emails.rfq}`}
+              className="group inline-flex w-full min-h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-pink-600/20 transition-all duration-300 hover:-translate-y-0.5 hover:from-pink-500 hover:to-rose-500 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-500"
+            >
+              Request a Proposal
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
           </div>
 
         </div>

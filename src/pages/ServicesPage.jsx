@@ -86,7 +86,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <main className="relative min-h-screen w-full min-w-0 overflow-x-clip bg-slate-50 pt-24 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+    <main className="relative min-h-screen w-full min-w-0 overflow-x-clip bg-slate-50 pt-16 text-slate-800 sm:pt-24 dark:bg-slate-950 dark:text-slate-100">
 
       {/* HERO SECTION — Full viewport height */}
       <section className="relative w-full h-[calc(100svh-6rem)] min-h-[600px] overflow-hidden border-b border-slate-200/80 dark:border-white/5">
