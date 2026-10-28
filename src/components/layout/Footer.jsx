@@ -69,34 +69,7 @@ export default function Footer() {
               {COMPANY.description}
             </p>
 
-            {/* Contact block */}
-            <div className="rounded-xl border border-slate-200/80 dark:border-white/[0.07] bg-slate-50 dark:bg-white/[0.02] p-4 flex flex-col gap-2.5">
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-pink-600 dark:text-pink-400 mb-1">
-                Official Inquiries &amp; RFQ
-              </p>
-              <div className="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                <Mail className="w-3.5 h-3.5 text-pink-600 dark:text-pink-400 shrink-0" />
-                <span>General: </span>
-                <a
-                  href={`mailto:${COMPANY.emails.general}`}
-                  className="font-mono text-slate-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-400 font-medium break-all"
-                  style={{ transition: 'color 0.15s ease' }}
-                >
-                  {COMPANY.emails.general}
-                </a>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs text-slate-700 dark:text-slate-300">
-                <Mail className="w-3.5 h-3.5 text-pink-600 dark:text-pink-400 shrink-0" />
-                <span>RFQ: </span>
-                <a
-                  href={`mailto:${COMPANY.emails.rfq}`}
-                  className="font-mono text-slate-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-400 font-medium break-all"
-                  style={{ transition: 'color 0.15s ease' }}
-                >
-                  {COMPANY.emails.rfq}
-                </a>
-              </div>
-            </div>
+            {null}
 
             {/* Social links */}
             <div className="flex items-center gap-2.5">

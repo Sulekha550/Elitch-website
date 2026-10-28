@@ -134,49 +134,6 @@ export default function ContactPage() {
             {/* LEFT: CONTACT INFORMATION */}
             <div className="space-y-5 lg:col-span-5">
 
-              {/* Primary Bidding Desk */}
-              <article className="rounded-2xl border border-pink-200/70 bg-gradient-to-br from-pink-50 via-white to-purple-50 p-6 shadow-sm transition-all duration-300 hover:border-pink-300 hover:shadow-lg hover:shadow-pink-500/[0.06] dark:border-pink-400/20 dark:from-slate-900 dark:via-slate-900 dark:to-indigo-950/40 sm:p-8">
-                <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-                  <div className="min-w-0" />
-                </div>
-
-                <h2 className="heading-card mb-2 !text-slate-900 dark:!text-white">
-                  Request for Proposal &amp; Pricing
-                </h2>
-
-                <p className="body-sm mb-5 !text-slate-600 dark:!text-slate-300">
-                  For fast feasibility calculations, incidence modeling,
-                  and formal RFQ proposals:
-                </p>
-
-                <div className="flex items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-white p-4 shadow-sm dark:border-white/[0.08] dark:bg-slate-950/80">
-                  <div className="flex min-w-0 items-center gap-3">
-                    <Mail className="h-5 w-5 shrink-0 text-pink-600 dark:text-pink-400" />
-
-                    <div className="min-w-0">
-                      <span className="mb-0.5 block font-mono text-xs uppercase text-slate-500 dark:text-slate-400">
-                        Sales / RFQ
-                      </span>
-
-                      <a
-                        href={`mailto:${COMPANY.emails.rfq}`}
-                        className="body-sm break-all font-mono font-bold !text-slate-900 transition-colors hover:!text-pink-700 dark:!text-white dark:hover:!text-pink-400"
-                      >
-                        {COMPANY.emails.rfq}
-                      </a>
-                    </div>
-                  </div>
-
-                  <a
-                    href={`mailto:${COMPANY.emails.rfq}`}
-                    aria-label="Send email to sales desk"
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-pink-200 bg-pink-50 text-pink-700 transition-all hover:border-pink-300 hover:bg-pink-100 dark:border-pink-400/20 dark:bg-pink-500/10 dark:text-pink-300 dark:hover:bg-pink-500/20"
-                  >
-                    <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                </div>
-              </article>
-
               {/* Corporate Headquarters */}
               <article className="card-base rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/[0.05] dark:border-white/[0.08] dark:bg-slate-900/80 dark:hover:border-purple-400/30 sm:p-8">
                 <p className="eyebrow mb-4 !text-purple-700 dark:!text-purple-300">

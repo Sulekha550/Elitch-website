@@ -11,17 +11,14 @@ import {
   Target,
   Globe2,
   Lightbulb,
-  ShieldCheck,
   Database,
   Users,
   Compass,
   Workflow,
   ClipboardCheck,
-  MessageSquare,
   Zap,
   Activity,
   Check,
-  Clock,
   Layers,
   FileCheck,
   Award,
@@ -77,18 +74,7 @@ export default function HomePage() {
             {/* ── LEFT: Heading / Description / CTAs / Trust Bar ── */}
             <div className="flex flex-col space-y-4 sm:space-y-5 text-center lg:text-left min-w-0">
 
-              {/* Live Research Telemetry Pill */}
-              <ScrollReveal animation="fade-up" duration={600}>
-                <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-semibold bg-white/80 dark:bg-white/[0.06] border border-slate-200 dark:border-white/10 shadow-xs backdrop-blur-md max-w-full">
-                  <span className="relative flex h-2 w-2 shrink-0">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                  </span>
-                  <span className="text-slate-700 dark:text-slate-200 font-mono tracking-wide uppercase text-[10px] sm:text-[11px] truncate">
-                    Global Market Research &amp; Intelligence · 45+ Countries
-                  </span>
-                </div>
-              </ScrollReveal>
+              {null}
 
               {/* Exact Headline: "WE Provide Authentic Data, Credible Insights, & Successful Strategies" */}
               <ScrollReveal animation="fade-up" delay={100} duration={650}>
@@ -461,65 +447,18 @@ export default function HomePage() {
             {/* Left Column: Bidding Desk SLA & Direct Contacts */}
             <div className="lg:col-span-5 space-y-5 sm:space-y-6">
               <ScrollReveal animation="fade-up" duration={600}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-pink-100 dark:bg-pink-950/80 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-pink-800/60">
-                  <Clock className="w-3.5 h-3.5" />
-                  <span>2-Hour Bidding SLA</span>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal animation="fade-up" delay={100} duration={650}>
                 <h2 className="text-2xl sm:text-3xl font-display font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
                   Commission Your Research Study.
                 </h2>
               </ScrollReveal>
 
-              <ScrollReveal animation="fade-up" delay={200} duration={650}>
+              <ScrollReveal animation="fade-up" delay={100} duration={650}>
                 <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                   Submit your sample specs, target incidence rate, and questionnaire length. Our bidding architects evaluate feasibility and provide comprehensive rate cards within two business hours.
                 </p>
               </ScrollReveal>
 
-              <ScrollReveal animation="fade-up" delay={300} duration={650}>
-                <div className="space-y-4 pt-4 border-t border-slate-200 dark:border-white/10">
-                  <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-                    <div className="w-9 h-9 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-pink-600 dark:text-pink-400 shrink-0 shadow-xs">
-                      <MessageSquare className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 dark:text-slate-400 block font-mono uppercase">Direct RFQ Desk</span>
-                      <a href={`mailto:${COMPANY.emails.rfq}`} className="text-slate-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-300 font-medium">
-                        {COMPANY.emails.rfq}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-                    <div className="w-9 h-9 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-pink-600 dark:text-pink-400 shrink-0 shadow-xs">
-                      <Clock className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 dark:text-slate-400 block font-mono uppercase">Direct Hotline</span>
-                      <a href={`tel:${COMPANY.phone}`} className="text-slate-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-300 font-medium">
-                        {COMPANY.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300">
-                    <div className="w-9 h-9 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-pink-600 dark:text-pink-400 shrink-0 shadow-xs">
-                      <ShieldCheck className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-slate-500 dark:text-slate-400 block font-mono uppercase">Global Privacy</span>
-                      <span className="text-slate-900 dark:text-white font-medium">
-                        Mutual NDAs executed promptly upon request
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal animation="fade-up" delay={400} duration={650}>
+              <ScrollReveal animation="fade-up" delay={200} duration={650}>
                 <div className="p-4 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs text-slate-600 dark:text-slate-300 space-y-1 shadow-xs">
                   <div className="font-semibold text-slate-900 dark:text-white">Global Operating Hubs:</div>
                   <div className="text-slate-500 dark:text-slate-400">

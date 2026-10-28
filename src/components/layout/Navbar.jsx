@@ -138,15 +138,6 @@ export default function Navbar() {
           <div className="flex items-center gap-5">
             </div>
           <div className="flex items-center gap-5">
-            <a
-              href={`mailto:${COMPANY.emails.rfq}`}
-              className="flex items-center gap-1.5 font-mono hover:text-cyan-600 dark:hover:text-cyan-400"
-              style={{ transition: 'color 0.15s ease' }}
-            >
-              <Mail className="w-3 h-3 text-cyan-600 dark:text-cyan-400" />
-              RFQ: {COMPANY.emails.rfq}
-            </a>
-            <span className="text-slate-300 dark:text-slate-700">|</span>
             <span className="font-mono">{COMPANY.emails.general}</span>
           </div>
         </div>
