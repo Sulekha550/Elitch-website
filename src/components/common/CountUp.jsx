@@ -88,3 +88,4 @@ export default function CountUp({ value, duration = 1600, className = '' }) {
     </span>
   );
 }
+

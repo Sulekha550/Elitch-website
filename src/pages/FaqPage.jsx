@@ -22,7 +22,7 @@ export default function FaqPage() {
   };
 
   return (
-    <div className="relative pt-24">
+    <div className="relative pt-16">
       {/* Background glow */}
       <div className="absolute top-0 right-1/3 w-[750px] h-[450px] bg-pink-300/15 dark:bg-pink-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -78,7 +78,7 @@ export default function FaqPage() {
       </section>
 
       {/* Accordion List */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-950">
+      <section className="py-12 sm:py-16 lg:py-12 bg-slate-50 dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-6 space-y-12">
           {FAQ_DATA.map((cat, catIdx) => {
             const filteredQuestions = cat.questions.filter(
@@ -164,3 +164,4 @@ export default function FaqPage() {
     </div>
   );
 }
+

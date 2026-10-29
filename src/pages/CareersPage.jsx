@@ -240,7 +240,7 @@ export default function CareersPage() {
       </section>
 
       {/* Culture & Values */}
-      <section className="relative z-10 overflow-hidden bg-gradient-to-br from-white via-pink-50/70 to-purple-50/60 py-14 transition-colors duration-300 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-950 sm:py-20">
+      <section className="relative z-10 overflow-hidden bg-gradient-to-br from-white via-pink-50/70 to-purple-50/60 py-12 transition-colors duration-300 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-950 sm:py-16">
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <div className="mx-auto mb-12 max-w-xl text-center sm:mb-16">
             <span className="inline-flex items-center gap-2 rounded-full border border-pink-200/80 bg-white/70 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-pink-700 shadow-sm backdrop-blur-md dark:border-pink-400/20 dark:bg-pink-400/[0.06] dark:text-pink-400">
@@ -339,7 +339,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section className="relative z-10 overflow-hidden border-t border-slate-200/80 bg-slate-100/70 py-14 transition-colors duration-300 dark:border-white/[0.06] dark:bg-slate-900/50 sm:py-20">
+      <section className="relative z-10 overflow-hidden border-t border-slate-200/80 bg-slate-100/70 py-12 transition-colors duration-300 dark:border-white/[0.06] dark:bg-slate-900/50 sm:py-16">
         <div className="pointer-events-none absolute -right-20 top-20 h-72 w-72 rounded-full bg-purple-300/20 blur-[100px] dark:bg-purple-500/10" />
         <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-pink-300/15 blur-[100px] dark:bg-rose-500/10" />
 
@@ -568,3 +568,4 @@ export default function CareersPage() {
     </main>
   );
 }
+

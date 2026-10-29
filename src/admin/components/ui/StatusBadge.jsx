@@ -50,3 +50,4 @@ export default function StatusBadge({ status, type = 'status' }) {
     </span>
   );
 }
+

@@ -16,7 +16,7 @@ export default function StatTicker() {
   };
 
   return (
-    <section className="relative py-20 bg-slate-50/60 dark:bg-brand-900/40 border-y border-slate-200/80 dark:border-white/5 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-12 bg-slate-50/60 dark:bg-brand-900/40 border-y border-slate-200/80 dark:border-white/5 overflow-hidden">
       {/* Background ambient light */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-32 bg-cyan-500/5 blur-3xl rounded-full pointer-events-none"></div>
 
@@ -79,3 +79,4 @@ export default function StatTicker() {
     </section>
   );
 }
+

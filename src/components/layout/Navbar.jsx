@@ -123,10 +123,10 @@ export default function Navbar() {
 
   /* ── Header classes ── */
   const headerClass = [
-    'fixed top-0 left-0 right-0 z-50',
+    'fixed top-0 left-0 right-0 z-50 border-b border-slate-200/80 dark:border-white/[0.08] shadow-sm',
     scrolled
-      ? 'bg-white/98 dark:bg-brand-950/98 backdrop-blur-xl border-b border-slate-200/70 dark:border-white/[0.07] shadow-sm py-3'
-      : 'bg-white/90 dark:bg-brand-950/85 backdrop-blur-md py-4',
+      ? 'bg-white/98 dark:bg-brand-950/98 backdrop-blur-xl py-2.5 sm:py-3'
+      : 'bg-white/95 dark:bg-brand-950/90 backdrop-blur-md py-3 sm:py-3.5',
   ].join(' ');
 
   return (
@@ -389,3 +389,4 @@ export default function Navbar() {
     </header>
   );
 }
+

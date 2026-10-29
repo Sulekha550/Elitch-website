@@ -176,3 +176,4 @@ export default function RfqForm({ initialType = 'rfq' }) {
     </div>
   );
 }
+

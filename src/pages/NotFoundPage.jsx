@@ -6,7 +6,7 @@ import { HERO_IMAGES } from '../data/imageAssets';
 
 export default function NotFoundPage() {
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center pt-24 px-6 overflow-hidden">
+    <div className="relative min-h-[80vh] flex items-center justify-center pt-16 px-6 overflow-hidden">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -48,3 +48,4 @@ export default function NotFoundPage() {
     </div>
   );
 }
+

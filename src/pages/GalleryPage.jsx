@@ -42,7 +42,7 @@ export default function GalleryPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0C0D0C] text-[#F2EEE7] pt-28 pb-20 font-sans">
+    <div className="min-h-screen bg-[#0C0D0C] text-[#F2EEE7] pt-16 sm:pt-28 pb-20 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
@@ -83,7 +83,7 @@ export default function GalleryPage() {
             ))}
           </div>
         ) : items.length === 0 ? (
-          <div className="text-center py-20 p-8 rounded-3xl bg-[#171916] border border-white/[0.08]">
+          <div className="text-center py-12 sm:py-16 lg:py-12 p-8 rounded-3xl bg-[#171916] border border-white/[0.08]">
             <ImageIcon className="w-12 h-12 text-[#C7A15C] mx-auto mb-3 opacity-60" />
             <h3 className="text-lg font-bold text-[#F2EEE7]">No Photographs Available</h3>
           </div>
@@ -163,3 +163,4 @@ export default function GalleryPage() {
     </div>
   );
 }
+

@@ -80,12 +80,12 @@ export const SERVICE_IMAGES = {
     credit: "Unsplash / Wonderlane"
   },
   "customer-segmentation": {
-    url: "/images/Home/media-generation-elicit-customer-segmentation-0-0a542a19-de77-4596-a2a3-c4801ab06e9e.webp",
+    url: "/images/Home/media-generation-elicit-customer-segmentation-d-0-2e50f556-dff8-4d0c-b965-af43e9c958a0.webp",
     alt: "Data scientist analyzing customer segmentation clusters and behavioral persona metrics",
     credit: "Unsplash / Luke Chesser"
   },
   "customer-journey": {
-    url: "/images/Home/media-generation-elicit-customer-journey-0-8ba508f0-4c39-446a-89a7-50cc65809766.webp",
+    url: "/images/Home/media-generation-customer-journey-ke-liye-image-0-c39c9e10-4985-48a2-a9b3-7875fc13c34e.webp",
     alt: "Experience research team mapping customer journey touchpoints and emotional friction gates",
     credit: "Unsplash / Jason Goodman"
   },
@@ -95,12 +95,12 @@ export const SERVICE_IMAGES = {
     credit: "Unsplash / Austin Distel"
   },
   "cultural-insights": {
-    url: "/images/Home/media-generation-elicit-cultural-insight-0-40bda467-e70c-46d8-b94c-ceb6a3e7455a.webp",
+    url: "/images/Home/media-generation-elicit-cultural-insight-differ-0-1c2e58d9-debb-47d4-8b9b-56c6c8bf9e05.webp",
     alt: "Diverse international community reflecting global cultural perspectives and regional nuances",
     credit: "Unsplash / Duy Pham"
   },
   "b2b-strategies": {
-    url: "/images/Home/media-generation-elicit-b2b-strategies-0-c44984fb-252d-436e-9fb5-03e9a2fb4e29.webp",
+    url: "/images/Home/media-generation-elicit-b2b-different-no-board-0-191c8fe1-051c-4adc-a9bd-d084b3dadb0b.webp",
     alt: "C-suite enterprise executives evaluating vendor procurement and B2B market entry strategies",
     credit: "Unsplash / Hunters Race"
   },

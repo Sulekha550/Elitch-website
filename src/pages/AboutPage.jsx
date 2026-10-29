@@ -12,7 +12,6 @@ import {
   Linkedin,
   ArrowUpRight,
   Target,
-  Fingerprint,
   HandCoins,
   Layers3,
   Sparkles,
@@ -141,10 +140,20 @@ function FounderCard({ founder }) {
         {/* Layered portrait area */}
         <div className="relative min-h-[320px] overflow-hidden bg-[#eaf3f6] p-7 sm:min-h-[380px] md:min-h-[430px] md:p-8 lg:min-h-[455px] dark:bg-slate-800">
           <div aria-hidden="true" className="absolute inset-y-0 left-0 w-[72%] bg-gradient-to-br from-[#dceef2] via-[#eaf3f6] to-[#cce5eb] dark:from-slate-700 dark:via-slate-800 dark:to-slate-900" />
-          <div aria-hidden="true" className="absolute left-[17%] top-[11%] h-[78%] w-[78%] border-[4px] border-[#ec4899]" />
+          {/* Half-square pink accent frame on Top & Right side */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute left-[12%] right-[5%] top-[5%] bottom-[8%] rounded-tr-2xl"
+            style={{
+              borderTop: '4px solid #ec4899',
+              borderRight: '4px solid #ec4899',
+              borderBottom: 'none',
+              borderLeft: 'none',
+            }}
+          />
           <div aria-hidden="true" className="absolute bottom-[5%] left-[5%] h-[82%] w-[77%] bg-[#d7e9ee] dark:bg-slate-700" />
 
-          <div className="absolute inset-x-8 bottom-8 top-8 overflow-hidden bg-[#e7efff] shadow-[0_14px_35px_rgba(15,23,42,0.12)] dark:bg-slate-700">
+          <div className="absolute inset-x-8 bottom-8 top-8 aspect-[3/4] md:aspect-auto overflow-hidden bg-[#e7efff] shadow-[0_14px_35px_rgba(15,23,42,0.12)] dark:bg-slate-700">
             {founder.image ? (
               <img
                 src={founder.image}
@@ -172,17 +181,13 @@ function FounderCard({ founder }) {
           </div>
 
           <div className="absolute bottom-5 left-5 right-5 z-10 flex items-center justify-between gap-3">
-            <span className="rounded-md bg-[#126b89] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.13em] text-white shadow-md">Leadership</span>
-            <span className="h-1 w-12 rounded-full bg-[#ec4899]" />
+            {null}
+            {null}
           </div>
         </div>
 
         {/* Profile information */}
         <div className="flex flex-col justify-center p-5 sm:p-7 lg:p-9 xl:p-10">
-          <div className="mb-3 flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#ec4899]" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-pink-600 dark:text-pink-300 sm:text-xs">Leadership &amp; Vision</p>
-          </div>
 
           <h3 className="text-2xl font-bold leading-tight tracking-tight text-pink-600 sm:text-3xl lg:text-[2rem] dark:text-pink-300">{founder.name}</h3>
           <p className="mt-2 text-sm font-semibold leading-6 text-slate-900 dark:text-slate-100">{founder.role}</p>
@@ -198,8 +203,7 @@ function FounderCard({ founder }) {
                   key={detail.title}
                   className={`flex min-h-[96px] items-start gap-3 rounded-xl border p-3.5 transition-all duration-300 hover:-translate-y-0.5 sm:p-4 ${warm
                       ? "border-pink-200 bg-pink-50 hover:border-[#ec4899]/60 dark:border-pink-300/20 dark:bg-pink-400/[0.06]"
-                      : "border-pink-200 bg-pink-50 hover:border-pink-500/50 dark:border-pink-300/20 dark:bg-pink-400/[0.06]"
-                    }`}
+                      : "border-pink-200 bg-pink-50 hover:border-pink-500/50 dark:border-pink-300/20 dark:bg-pink-400/[0.06]"} ${detail.title === "Experience" || detail.title === "Education" ? "" : "hidden md:flex"}`}
                 >
                   <Icon size={21} strokeWidth={1.9} className={`mt-0.5 shrink-0 ${warm ? "text-[#ec4899]" : "text-pink-600 dark:text-pink-300"}`} />
                   <div className="min-w-0">
@@ -211,7 +215,7 @@ function FounderCard({ founder }) {
             })}
           </div>
 
-          <div className="mt-5">
+          <div className="mt-5 hidden md:block">
             <p className="mb-2 text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 dark:text-slate-500">Areas of Expertise</p>
             <div className="flex flex-wrap gap-2">
               {founder.expertise.map((skill) => (
@@ -272,7 +276,7 @@ export default function AboutPage() {
         }}
       >
         {/* Background glows and gradient */}
-        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden opacity-0">
           <div className="absolute left-1/2 top-0 h-[420px] w-[min(1200px,120vw)] -translate-x-1/2 rounded-full bg-gradient-to-b from-pink-500/20 via-purple-500/15 to-transparent blur-3xl sm:h-[600px]" />
 
           <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-purple-400/10 blur-3xl sm:right-1/4" />
@@ -361,7 +365,7 @@ export default function AboutPage() {
           {/* RIGHT COLUMN — HERO IMAGE */}
           <div className="relative order-2 md:order-1 lg:order-2 mx-auto w-full max-w-xl lg:max-w-none">
             <div
-              className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-pink-500/25 via-purple-500/20 to-rose-500/20 blur-2xl"
+              className="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-pink-500/25 via-purple-500/20 to-rose-500/20 blur-2xl opacity-0"
               aria-hidden="true"
             />
 
@@ -401,104 +405,85 @@ export default function AboutPage() {
 
       <section
         id="our-philosophy"
-        className="relative scroll-mt-20 overflow-hidden bg-gradient-to-br from-white via-pink-50/70 to-purple-50/60 py-14 sm:py-20 lg:py-24 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-950"
+        className="relative scroll-mt-20 overflow-hidden bg-gradient-to-br from-white via-pink-50/70 to-purple-50/60 py-8 sm:py-10 lg:py-8 dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-950"
       >
         <div className="section-container relative z-10">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2">
             <div className="relative lg:pr-4">
-              <div className="absolute -left-3 -top-3 h-24 w-24 rounded-tl-[32px] border-l-2 border-t-2 border-pink-400/60" />
-
               <div className="img-zoom-container relative overflow-hidden rounded-2xl border border-white/80 shadow-xl shadow-purple-900/10 dark:border-white/10 dark:shadow-black/20">
                 <img
                   src={ABOUT_IMAGES.philosophyTeam.url}
                   alt={ABOUT_IMAGES.philosophyTeam.alt}
-                  className="h-[280px] w-full object-cover object-center sm:h-[360px] lg:h-[400px]"
+                  className="h-[250px] w-full object-cover object-center sm:h-[320px] lg:h-[350px]"
                   loading="lazy"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
-
-                <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/20 bg-slate-950/75 p-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-pink-500 via-purple-500 to-rose-500 text-white">
-                      <Fingerprint size={19} />
-                    </div>
-
-                    <div>
-                      <p className="text-xs font-bold !text-white sm:text-sm">
-                        Research Integrity
-                      </p>
-
-                      <p className="mt-1 text-[11px] leading-5 !text-slate-300 sm:text-xs">
-                        Verified data. Reliable insights. Informed decisions.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              <div className="absolute -bottom-3 -right-2 -z-0 h-20 w-20 rounded-br-[30px] border-b-2 border-r-2 border-pink-500/40" />
             </div>
 
-            <div className="relative z-10 space-y-5">
-              <p className="text-[10px] font-bold tracking-[0.2em] text-pink-600 sm:text-xs dark:text-pink-400">
+            <div>
+              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-pink-600 sm:text-xs dark:text-pink-400">
                 Our Research Philosophy
               </p>
 
-              <h2 className="text-2xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-3xl lg:text-4xl dark:text-white">
-                Eliminating Noise.
+              <h2 className="text-xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-2xl lg:text-3xl dark:text-white">
+                Methodology Built on
                 <span className="block bg-gradient-to-r from-pink-500 via-purple-500 to-rose-500 bg-clip-text text-transparent">
-                  Delivering Verified Truth.
+                  Integrity & Insight.
                 </span>
               </h2>
 
-              <p className="text-sm leading-6 text-slate-600 sm:leading-7 dark:text-slate-400">
-                In a world increasingly saturated with unverified instant
-                polls and synthetic AI-generated respondents, reliable
-                research begins with trustworthy data. We focus on
-                connecting organizations with genuine perspectives from
-                real people, helping ensure that decisions are based on
-                evidence rather than assumptions.
+              <p className="mt-4 max-w-xl text-xs leading-5 text-slate-600 sm:leading-6 dark:text-slate-400">
+                We believe research is only as valuable as the trust behind it.
+                Our methodology prioritizes verified participants, transparent
+                economics, and adaptable frameworks that meet each client's
+                unique objectives.
               </p>
 
-              <p className="text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Our globally acknowledged panel and solution-based research
-                approach help businesses reach professionals and consumers
-                across relevant markets. By understanding demographic data,
-                market characteristics, media outreach, and personal
-                preferences, we help clients build a clearer picture of
-                their audiences.
+              <p className="mt-3 max-w-xl text-xs leading-5 text-slate-600 sm:leading-6 dark:text-slate-400">
+                From recruitment to delivery, every step is designed to reduce
+                bias, protect data quality, and deliver insights that stand up
+                to scrutiny.
               </p>
 
-              <div className="space-y-3 pt-1">
+              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {[
                   {
-                    Icon: CheckCircle2,
+                    Icon: ShieldCheck,
                     title: "Double Opt-In Verification",
-                    desc: "A verification-focused approach designed to support respondent authenticity and dependable research data.",
+                    desc: "Respondents are verified through layered confirmation to ensure genuine, high-quality participation.",
+                    tone: "pink",
                   },
                   {
                     Icon: HandCoins,
                     title: "Fair Incentive Economics",
-                    desc: "Transparent participation and incentive practices that respect respondents and encourage meaningful engagement.",
+                    desc: "Compensation is structured to motivate engagement without compromising data integrity.",
+                    tone: "purple",
                   },
-                  {
-                    Icon: Layers3,
-                    title: "Methodological Agnosticism",
-                    desc: "Research methods selected to suit the business question, target audience, and information required.",
-                  },
-                ].map(({ Icon, title, desc }) => (
-                  <div key={title} className="flex items-start gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-pink-100 bg-white/80 text-pink-700 shadow-sm dark:border-pink-400/20 dark:bg-pink-400/10 dark:text-pink-400">
+                ].map(({ Icon, title, desc, tone }) => (
+                  <div
+                    key={title}
+                    className="group flex items-start gap-3 rounded-xl border border-white/90 bg-white/75 p-3 shadow-sm backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-pink-200 hover:shadow-lg sm:p-4 dark:border-white/[0.08] dark:bg-white/[0.03]"
+                  >
+                    <div
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${
+                        tone === "pink"
+                          ? "bg-pink-50 text-pink-700 dark:bg-pink-400/10 dark:text-pink-400"
+                          : tone === "purple"
+                            ? "bg-purple-50 text-purple-700 dark:bg-purple-400/10 dark:text-purple-400"
+                            : "bg-rose-50 text-rose-700 dark:bg-rose-400/10 dark:text-rose-400"
+                      }`}
+                    >
                       <Icon size={17} />
                     </div>
 
                     <div>
-                      <h3 className="text-sm font-semibold text-slate-900 dark:text-white">
+                      <h3 className="text-[11px] font-semibold text-slate-900 sm:text-xs dark:text-white">
                         {title}
                       </h3>
 
-                      <p className="mt-1 text-xs leading-5 text-slate-600 sm:text-sm sm:leading-6 dark:text-slate-400">
+                      <p className="mt-1 text-[11px] leading-4 text-slate-500 dark:text-slate-400">
                         {desc}
                       </p>
                     </div>
@@ -512,11 +497,11 @@ export default function AboutPage() {
 
       {/* GOVERNANCE */}
 
-      <section className="relative overflow-hidden border-y border-slate-200/80 bg-slate-100/70 py-14 dark:border-white/[0.06] dark:bg-slate-900/50 sm:py-20 lg:py-24">
+      <section className="relative overflow-hidden border-y border-slate-200/80 bg-slate-100/70 py-12 dark:border-white/[0.06] dark:bg-slate-900/50 sm:py-16 lg:py-12">
         <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-purple-300/20 blur-[100px] dark:bg-purple-500/10" />
 
         <div className="section-container relative z-10">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
             <div>
               <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-600 sm:text-xs dark:text-emerald-400">
                 Built on Accountability
@@ -574,11 +559,11 @@ export default function AboutPage() {
                     </div>
 
                     <div>
-                      <h3 className="text-xs font-semibold text-slate-900 sm:text-sm dark:text-white">
+                      <h3 className="text-[11px] font-semibold text-slate-900 sm:text-xs dark:text-white">
                         {title}
                       </h3>
 
-                      <p className="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                      <p className="mt-1 text-[11px] leading-4 text-slate-500 dark:text-slate-400">
                         {desc}
                       </p>
                     </div>
@@ -592,75 +577,27 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="img-zoom-container relative overflow-hidden rounded-2xl border border-white/70 shadow-xl shadow-purple-900/10 dark:border-white/10 dark:shadow-black/20">
+            <div className="relative lg:pl-4">
+              <div className="img-zoom-container relative overflow-hidden rounded-2xl border border-white/80 shadow-xl shadow-purple-900/10 dark:border-white/10 dark:shadow-black/20">
                 <img
-                  src="/images/Home/elicit-trust-different-handshake-clean.webp"
-                  alt={HERO_IMAGES.corporateGlass.alt}
-                  className="h-[280px] w-full object-cover sm:h-[360px] lg:h-[400px]"
+                  src="/images/Home/media-generation-elicit-trust-handshake-white-b-0-eb25bc70-266d-4394-a7cd-f03e30f79e36.webp"
+                  alt="Handshake symbolizing trust and partnership in research"
+                  className="w-full h-[280px] object-cover sm:h-[320px]"
                   loading="lazy"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent" />
-
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* PROFESSIONAL EXPERIENCE */}
-      <section className="relative overflow-hidden bg-slate-50 py-14 sm:py-20 lg:py-24 dark:bg-slate-950">
-        <div className="section-container relative z-10">
-          <h2 className="text-2xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-3xl lg:text-4xl dark:text-white mb-8">
-            Professional Experience
-          </h2>
-          <div className="space-y-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Co-Founder / Chief Technology Officer</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Elicit Research · Full-time · Jan 2016 - Present · 10 yrs 10 mos · India · Hybrid</p>
-              <p className="mt-2 text-sm text-slate-700 dark:text-slate-300">Technology Leadership and Service Delivery</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Information Technology Operations Manager</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Serving Minds Private Limited · Full-time · Mar 2014 - Present · 12 yrs 8 mos · India</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Chief Technology Officer</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">ServingMind Online Solutions LLP · Full-time · Apr 2017 - Aug 2024 · 7 yrs 5 mos · India · On-site</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Product Development Specialist</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Anaaska Services · Full-time · Aug 2011 - Oct 2015 · 4 yrs 3 mos · Melbourne, Victoria, Australia</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* EDUCATION */}
-      <section className="relative overflow-hidden bg-slate-100 py-14 sm:py-20 lg:py-24 dark:bg-slate-900">
-        <div className="section-container relative z-10">
-          <h2 className="text-2xl font-semibold leading-tight tracking-tight text-slate-900 sm:text-3xl lg:text-4xl dark:text-white mb-8">
-            Education
-          </h2>
-          <div className="space-y-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">Maharshi Dayanand University</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Master of Business Administration - MBA, International Business · 2009 – 2011</p>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white">GITM Gurgaon</h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400">Bachelor of Technology - BTech, Computer Science · 2005 – 2009</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {null}
 
       {/* FOUNDERS */}
 
       <section
         id="founders"
-        className="relative scroll-mt-20 overflow-hidden bg-slate-50 py-14 sm:py-20 lg:py-24 dark:bg-slate-950"
+        className="relative scroll-mt-20 overflow-hidden bg-slate-50 py-12 sm:py-16 lg:py-12 dark:bg-slate-950"
       >
         <div className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full bg-pink-300/20 blur-[100px] dark:bg-pink-500/10" />
 
@@ -690,7 +627,7 @@ export default function AboutPage() {
               </div>
 
               <div>
-                <p className="text-xs font-semibold text-slate-900 sm:text-sm dark:text-white">
+                <p className="text-[11px] font-semibold text-slate-900 sm:text-xs dark:text-white">
                   Founders & Leadership
                 </p>
 
@@ -713,7 +650,7 @@ export default function AboutPage() {
 
       <section
         id="leadership"
-        className="relative scroll-mt-20 overflow-hidden border-t border-slate-200/80 bg-slate-100/70 py-14 dark:border-white/[0.06] dark:bg-slate-900/50 sm:py-20"
+        className="relative scroll-mt-20 overflow-hidden border-t border-slate-200/80 bg-slate-100/70 py-12 dark:border-white/[0.06] dark:bg-slate-900/50 sm:py-16"
         aria-label="Leadership and governance"
       >
         <div className="pointer-events-none absolute -right-20 top-20 h-72 w-72 rounded-full bg-pink-300/15 blur-[100px] dark:bg-purple-500/10" />
@@ -806,7 +743,7 @@ export default function AboutPage() {
 
       {/* GLOBAL OPERATIONS */}
 
-      <section className="relative overflow-hidden border-t border-white/80 bg-gradient-to-br from-slate-50 via-pink-50/70 to-purple-50/70 py-14 dark:border-white/[0.06] dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-950 sm:py-20 lg:py-24">
+      <section className="relative overflow-hidden border-t border-white/80 bg-gradient-to-br from-slate-50 via-pink-50/70 to-purple-50/70 py-12 dark:border-white/[0.06] dark:from-slate-950 dark:via-purple-950/20 dark:to-slate-950 sm:py-16 lg:py-12">
         <div className="pointer-events-none absolute -left-20 top-24 h-72 w-72 rounded-full bg-pink-300/20 blur-[100px] dark:bg-pink-500/10" />
 
         <div className="section-container relative z-10">
@@ -925,3 +862,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

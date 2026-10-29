@@ -286,3 +286,4 @@ export default function Hero3DScene({ className = '' }) {
     </div>
   );
 }
+

@@ -455,3 +455,4 @@ export default function GalleryManagementPage() {
     </div>
   );
 }
+

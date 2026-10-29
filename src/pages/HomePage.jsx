@@ -37,6 +37,7 @@ import GlobalReachVisual from '../components/home/GlobalReachVisual';
 import ServicesMatrix from '../components/home/ServicesMatrix';
 import MethodologyFlow from '../components/home/MethodologyFlow';
 import Hero3DScene from '../components/home/Hero3DScene';
+import GrowthAnalyticsChart from '../components/home/GrowthAnalyticsChart';
 import RfqForm from '../components/contact/RfqForm';
 import ScrollReveal from '../components/common/ScrollReveal';
 import CountUp from '../components/common/CountUp';
@@ -56,7 +57,7 @@ export default function HomePage() {
           HERO SECTION — "WE Provide Authentic Data, Credible Insights, & Successful Strategies"
           + Full-Length Expansive Growth Showcase
          ========================================================================= */}
-      <section className="hero-section relative w-full min-h-0 h-auto py-8 sm:py-12 lg:py-16 lg:min-h-[calc(100svh-5rem)] flex items-center overflow-hidden border-b border-white/5 box-border">
+      <section className="hero-section relative w-full min-h-screen h-screen py-8 sm:py-12 lg:py-16 flex items-center overflow-hidden border-b border-white/5 box-border">
         
         {/* Subtle background ambient glowing gradients */}
         <div className="pointer-events-none absolute inset-0 -z-10">
@@ -129,18 +130,7 @@ export default function HomePage() {
              <ScrollReveal animation="fade-up" delay={200} duration={900}>
               <div className="relative flex items-center justify-center lg:justify-end mt-4 lg:mt-0">
                 <div className="relative w-full max-w-[580px] lg:max-w-none">
-                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl ring-1 ring-pink-200/40 dark:ring-pink-500/20"
-                    style={{ boxShadow: '0 20px 60px rgba(236,72,153,0.18), 0 8px 24px rgba(99,102,241,0.15)', background: 'linear-gradient(135deg, #8b5cf6 0%, #E91E63 100%)' }}
-                  >
-                    <img
-                      src="/images/Home/elicit-home-hero-chart-clean.webp"
-                      alt="Business growth graph"
-                      className="w-full h-56 sm:h-72 md:h-80 lg:h-[400px] object-cover transition-transform duration-700 ease-out"
-                      loading="eager"
-                      fetchPriority="high"
-                      style={{ display: 'block' }}
-                    />
-                  </div>
+                  <GrowthAnalyticsChart />
                 </div>
               </div>
             </ScrollReveal>
@@ -174,12 +164,12 @@ export default function HomePage() {
       {/* =========================================================================
           SECTION 2: "Insights. Innovation. Impact" & The 3 Stat Blocks (Page 1)
          ========================================================================= */}
-      <section className="relative py-14 sm:py-20 lg:py-28 bg-slate-100 dark:bg-slate-900 overflow-hidden border-b border-white/5">
+      <section className="relative py-12 sm:py-16 lg:py-12 bg-slate-100 dark:bg-slate-900 overflow-hidden border-b border-white/5">
         {/* Ambient */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Authentic Copy from Page 1 of Reference */}
             <div className="lg:col-span-7 space-y-4 sm:space-y-6 text-center lg:text-left">
@@ -209,7 +199,7 @@ export default function HomePage() {
                   {/* Card 1: 60+ Clients (Teal Card) */}
                   <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg sm:shadow-xl shadow-teal-500/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[130px] sm:min-h-[150px]">
                     <div className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-                      <CountUp value="60+" />
+                      <CountUp value="60+" duration={2800} />
                     </div>
                     <div>
                       <span className="text-sm sm:text-base font-bold block">Clients</span>
@@ -220,7 +210,7 @@ export default function HomePage() {
                   {/* Card 2: 30+ Countries (Blue Card) */}
                   <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg sm:shadow-xl shadow-blue-500/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[130px] sm:min-h-[150px]">
                     <div className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-                      <CountUp value="30+" />
+                      <CountUp value="30+" duration={2800} />
                     </div>
                     <div>
                       <span className="text-sm sm:text-base font-bold block">Countries</span>
@@ -231,7 +221,7 @@ export default function HomePage() {
                   {/* Card 3: 130+ Experts (Pink/Magenta Card) */}
                   <div className="sm:col-span-2 lg:col-span-2 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-pink-600 to-rose-600 text-white shadow-lg sm:shadow-xl shadow-pink-500/20 transform hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[130px] sm:min-h-[150px]">
                     <div className="text-3xl sm:text-4xl font-display font-extrabold tracking-tight">
-                      <CountUp value="130+" />
+                      <CountUp value="130+" duration={2800} />
                     </div>
                     <div>
                       <span className="text-sm sm:text-base font-bold block">Experts</span>
@@ -250,7 +240,7 @@ export default function HomePage() {
       {/* =========================================================================
           SECTION 3: "Explore Our Services" (10 Core Capabilities Grid)
          ========================================================================= */}
-      <section id="services-section" className="py-14 sm:py-20 lg:py-28 bg-slate-50 dark:bg-slate-950 border-b border-white/5">
+      <section id="services-section" className="py-12 sm:py-16 lg:py-12 bg-slate-50 dark:bg-slate-950 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 sm:mb-12">
             <ScrollReveal animation="fade-up" duration={600}>
@@ -288,7 +278,7 @@ export default function HomePage() {
       {/* =========================================================================
           SECTION 6: DUAL SPLIT BANNER
          ========================================================================= */}
-      <section className="py-14 sm:py-20 lg:py-24 bg-slate-50 dark:bg-slate-950 border-t border-white/5">
+      <section className="py-12 sm:py-16 lg:py-12 bg-slate-50 dark:bg-slate-950 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <ScrollReveal animation="fade-up" duration={700}>
             <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl grid grid-cols-1 lg:grid-cols-12 border border-slate-200 dark:border-white/10">
@@ -349,7 +339,7 @@ export default function HomePage() {
       {/* =========================================================================
           GLOBAL OPERATING HUBS SHOWCASE WITH CITY UNSPLASH ASSETS
          ========================================================================= */}
-      <section className="py-14 sm:py-20 lg:py-24 bg-slate-100 dark:bg-slate-900 border-t border-white/5">
+      <section className="py-12 sm:py-16 lg:py-12 bg-slate-100 dark:bg-slate-900 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="text-xs font-mono uppercase tracking-widest text-pink-600 dark:text-pink-400 font-semibold px-3 py-1 rounded-full bg-pink-100 dark:bg-pink-950/60 border border-pink-200 dark:border-pink-800/50 inline-block mb-3">
@@ -432,7 +422,7 @@ export default function HomePage() {
          ========================================================================= */}
       <section 
         id="rfq-section" 
-        className="relative py-14 sm:py-20 lg:py-28 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white overflow-hidden border-t border-white/5"
+        className="relative py-12 sm:py-16 lg:py-12 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-white overflow-hidden border-t border-white/5"
       >
         {/* Legacy #contact anchor support */}
         <div id="contact" className="absolute -top-20 opacity-0 pointer-events-none" />
@@ -442,7 +432,7 @@ export default function HomePage() {
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Column: Bidding Desk SLA & Direct Contacts */}
             <div className="lg:col-span-5 space-y-5 sm:space-y-6">
@@ -548,3 +538,4 @@ export default function HomePage() {
     </main>
   );
 }
+

@@ -54,9 +54,7 @@ export default function ServicesMatrix() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
           <div className="lg:col-span-7">
             <div className="max-w-2xl">
-              <p className="text-slate-600 dark:text-slate-400 text-sm max-w-md">
-                From precision survey engineering and algorithmic fraud screening to executive B2B strategy and qualitative ethnography.
-              </p>
+              {null}
             </div>
           </div>
         </div>
@@ -124,7 +122,7 @@ export default function ServicesMatrix() {
 
                   {/* Badge overlay — top right */}
                   <div className="absolute top-3 right-3">
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-gradient-to-r from-pink-600/90 to-rose-600/90 text-white backdrop-blur-sm border border-white/20 shadow-sm">
+                    <span className="hidden md:inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-gradient-to-r from-pink-600/90 to-rose-600/90 text-white backdrop-blur-sm border border-white/20 shadow-sm">
                       {service.badge}
                     </span>
                   </div>
@@ -156,9 +154,9 @@ export default function ServicesMatrix() {
                   {/* Capabilities list — always 2 items for visual consistency */}
                   <ul className="space-y-2 mb-4 flex-1">
                     {service.capabilities.slice(0, 2).map((cap, i) => (
-                      <li key={i} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                        <Check className="w-3.5 h-3.5 text-pink-600 dark:text-pink-400 shrink-0 mt-0.5" />
-                        <span>{cap}</span>
+                      <li key={i} className="flex items-start gap-[6px] md:gap-[8px] text-[11px] md:text-[12px] leading-[1.35] text-slate-700 dark:text-slate-300">
+                        <Check className="w-[14px] h-[14px] md:w-[16px] md:h-[16px] text-pink-600 dark:text-pink-400 shrink-0 mt-0.5" />
+                        <span className="whitespace-nowrap">{cap}</span>
                       </li>
                     ))}
                   </ul>
@@ -196,3 +194,4 @@ export default function ServicesMatrix() {
     </div>
   );
 }
+

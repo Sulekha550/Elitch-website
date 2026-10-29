@@ -265,6 +265,12 @@ export default function ServicesPage() {
                      service.id === 'research-design' ? 'lg:order-1' : (index % 2 === 1 ? 'lg:order-2' : 'lg:order-1')
                    }`}
                   >
+                    {/* Practice label row: shown just above the image on mobile (phone view) */}
+                    <div className="mb-3 block lg:hidden">
+                      <span className="text-xs font-mono font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400">
+                        Practice #{String(index + 1).padStart(2, '0')} · {service.category}
+                      </span>
+                    </div>
                     {service.image?.url ? (
                       <div className="relative">
                         <div aria-hidden="true" className={`absolute -top-2 h-full w-full border-4 border-pink-500 rounded-2xl ${index % 2 === 1 ? '-right-2' : '-left-2'}`} />
@@ -317,14 +323,16 @@ export default function ServicesPage() {
                             {getIcon(service.icon)}
                           </div>
 
-                          <span className="text-xs font-mono font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400">
+                          <span className="hidden lg:inline text-xs font-mono font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400">
                             Practice #{String(index + 1).padStart(2, '0')} · {service.category}
                           </span>
                         </div>
 
-                        <span className="rounded-full border border-pink-200 bg-pink-50 px-3 py-1 text-xs font-semibold text-pink-700 dark:border-pink-800/50 dark:bg-pink-950/60 dark:text-pink-300">
-                          {service.badge}
-                        </span>
+                        {service.badge && (
+                          <span className="hidden md:inline-flex rounded-full border border-pink-200 bg-pink-50 px-3 py-1 text-xs font-semibold text-pink-700 dark:border-pink-800/50 dark:bg-pink-950/60 dark:text-pink-300">
+                            {service.badge}
+                          </span>
+                        )}
                       </div>
 
                       <h2 className="text-2xl font-display font-extrabold leading-tight tracking-tight text-slate-900 sm:text-3xl dark:text-white">

@@ -7,7 +7,7 @@ import { HERO_IMAGES } from '../data/imageAssets';
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="relative pt-24">
+    <div className="relative pt-16">
       {/* Full-Width Hero Image Cover */}
       <section className="relative border-b border-slate-200/80 dark:border-white/10">
         <div className="relative w-full h-[360px] sm:h-[420px] overflow-hidden group">
@@ -101,3 +101,4 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+

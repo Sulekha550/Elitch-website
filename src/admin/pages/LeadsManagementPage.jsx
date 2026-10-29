@@ -324,7 +324,7 @@ export default function LeadsManagementPage() {
                                 title="View Full Details"
                               >
                                 <Eye className="w-3.5 h-3.5" />
-                              </button>}
+                              </button>
                               <a
                                 href={`https://wa.me/${cleanPhoneForWhatsApp(lead.phone)}?text=Dear%20${encodeURIComponent(lead.name)},%20this%20is%20Elicit%20Research%20%26%20Insights%20Inc.%20following%20up%20on%20your%20inquiry.`}
                                 target="_blank"
@@ -551,3 +551,4 @@ export default function LeadsManagementPage() {
     </div>
   );
 }
+

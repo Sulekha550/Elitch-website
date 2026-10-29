@@ -10,6 +10,7 @@ import {
   Gift,
   MessageCircle,
 } from "lucide-react";
+import AnimatedCounter from "../components/common/AnimatedCounter";
 
 const regions = [
   { label: "North America", x: 115, y: 92, color: "#ec4899" },
@@ -37,7 +38,6 @@ const stats = [
 const panelFeatures = [
   "Global audiences",
   "B2B & B2C samples",
-  "Quality-focused research",
 ];
 
 const trustPoints = [
@@ -77,7 +77,7 @@ export default function PanelPage() {
         </div>
 
         {/* Hero content grid */}
-        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 py-5 sm:px-8 sm:py-6 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-4">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 py-3 sm:px-8 sm:py-6 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-4">
 
           {/* LEFT COLUMN */}
           <div className="flex min-w-0 flex-col items-center text-center order-1 md:order-2 lg:order-1 lg:items-start lg:text-left">
@@ -106,7 +106,7 @@ export default function PanelPage() {
               <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-emerald-500" />
 
               <span className="text-[9px] font-bold uppercase leading-relaxed tracking-[0.12em] text-slate-700 sm:text-xs sm:tracking-[0.18em] dark:text-slate-200">
-                Global Market Research &amp; Intelligence Solutions · 45+ Countries
+                Global Market Research &amp; Intelligence Solutions · <AnimatedCounter value="45+" duration={1800} /> Countries
               </span>
             </div>
 
@@ -146,12 +146,16 @@ export default function PanelPage() {
 
             {/* Trust points */}
             <div className="mt-6 flex max-w-4xl flex-wrap justify-center gap-x-5 gap-y-2.5 text-[11px] font-medium text-slate-600 sm:mt-7 sm:gap-x-6 sm:gap-y-3 sm:text-sm lg:justify-start dark:text-slate-300">
-              {trustPoints.map((item) => (
+              {trustPoints.filter(item => item !== "Quality-focused research").map((item) => (
                 <span key={item} className="inline-flex items-center gap-2">
                   <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
                   {item}
                 </span>
               ))}
+             <span className="hidden items-center gap-2 md:inline-flex">
+  <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+  Quality-focused research
+</span>
             </div>
           </div>
 
@@ -196,7 +200,7 @@ export default function PanelPage() {
       {/* PANEL OVERVIEW */}
       <section
         id="panel-overview"
-        className="relative scroll-mt-24 border-y border-slate-200/80 bg-white py-14 sm:py-20 lg:py-24 dark:border-white/5 dark:bg-slate-900"
+        className="relative scroll-mt-24 border-y border-slate-200/80 bg-white py-12 sm:py-16 lg:py-12 dark:border-white/5 dark:bg-slate-900"
       >
         <div className="pointer-events-none absolute -left-20 top-24 h-64 w-64 rounded-full border-[24px] border-pink-100/70 dark:border-pink-400/10" />
 
@@ -239,7 +243,7 @@ export default function PanelPage() {
 
               <div>
                 <p className="text-3xl font-extrabold tracking-tight sm:text-5xl">
-                  5M+
+                  <AnimatedCounter value="5M+" duration={1800} />
                 </p>
                 <p className="mt-2 text-xs font-medium text-white/90 sm:text-sm">
                   Panel Members
@@ -259,7 +263,7 @@ export default function PanelPage() {
 
                   <div>
                     <p className="text-xl font-extrabold sm:text-3xl">
-                      {value}
+                      <AnimatedCounter value={value} duration={1800} />
                     </p>
                     <p className="mt-1 text-[11px] font-medium text-white/90 sm:text-xs">
                       {label}
@@ -273,7 +277,7 @@ export default function PanelPage() {
       </section>
 
       {/* GLOBAL REACH */}
-      <section className="border-b border-slate-200/80 bg-slate-50 py-14 sm:py-20 lg:py-24 dark:border-white/5 dark:bg-slate-950">
+      <section className="border-b border-slate-200/80 bg-slate-50 py-12 sm:py-16 lg:py-12 dark:border-white/5 dark:bg-slate-950">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-pink-600 dark:text-pink-400">
@@ -383,55 +387,25 @@ export default function PanelPage() {
       </section>
 
       {/* PANEL BOOK + PLATFORM CTA */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="w-full">
 
-        {/* Panel Book */}
-        <div className="relative flex min-h-[340px] flex-col justify-between overflow-hidden bg-gradient-to-br from-pink-600 via-rose-600 to-pink-700 p-6 text-white sm:p-10 lg:min-h-[370px] lg:p-14">
-          <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full border-[25px] border-white/10" />
-          <div className="absolute -bottom-16 -left-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
-
-          <Download className="relative h-9 w-9" />
-
-          <div className="relative mt-8 sm:mt-10">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/90">
-              Explore Our Community
-            </span>
-
-            <h2 className="mt-3 max-w-md text-2xl font-extrabold leading-tight sm:text-3xl">
-              Download Our Panel Book
-            </h2>
-
-            <p className="mt-4 max-w-md text-sm leading-7 text-white/90">
-              Learn more about our panel, audience reach, and research
-              capabilities.
-            </p>
-
-            <a
-              href="/files/elicit-panel-book.pdf"
-              download
-              className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white px-5 py-3.5 text-sm font-bold text-pink-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-pink-50"
-            >
-              Download Panel Book
-              <Download className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
+        {null}
 
         {/* Community CTA */}
-        <div className="relative flex min-h-[340px] flex-col justify-center overflow-hidden bg-slate-900 p-6 text-white sm:p-10 lg:min-h-[370px] lg:p-14 dark:bg-black">
+        <div className="relative flex min-h-[200px] flex-col justify-center overflow-hidden bg-slate-900 p-6 text-white sm:p-10 lg:min-h-[220px] lg:p-14 dark:bg-black">
           <div className="absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-pink-500/20 blur-3xl" />
           <div className="absolute -right-10 top-0 h-48 w-48 rounded-full bg-purple-500/10 blur-3xl" />
 
-          <div className="relative">
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
+          <div className="relative mx-auto max-w-3xl text-center">
+            <div className="mb-5 mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
               <MessageCircle className="h-6 w-6 text-pink-300" />
             </div>
 
-            <h2 className="max-w-xl text-2xl font-extrabold leading-tight sm:text-3xl">
+            <h2 className="mx-auto max-w-xl text-2xl font-extrabold leading-tight sm:text-3xl">
               Your opinions shape the world around us.
             </h2>
 
-            <p className="mt-4 max-w-xl text-sm leading-7 text-slate-300">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-slate-300">
               Your voice has value. Join a research community where opinions
               help influence products, services, and businesses.
             </p>
@@ -451,3 +425,4 @@ export default function PanelPage() {
     </main>
   );
 }
+

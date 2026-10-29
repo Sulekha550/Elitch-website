@@ -26,7 +26,7 @@ export default function ContactPage() {
         </div>
 
         {/* Two-column grid */}
-        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-5 pt-24 sm:px-8 sm:pt-28 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:pt-32">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-5 pt-16 sm:px-8 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:pt-32">
 
           {/* LEFT COLUMN — all existing content */}
           <div className="flex min-w-0 flex-col space-y-6 order-1 lg:order-1">
@@ -124,7 +124,7 @@ export default function ContactPage() {
 
 
       {/* CONTACT INFORMATION + RFQ FORM */}
-      <section className="relative overflow-hidden bg-slate-50 py-12 dark:bg-slate-950 sm:py-16 lg:py-20">
+      <section className="relative overflow-hidden bg-slate-50 py-12 dark:bg-slate-950 sm:py-16 lg:py-12">
         <div className="pointer-events-none absolute -left-32 top-20 h-80 w-80 rounded-full bg-pink-500/[0.06] blur-3xl" />
         <div className="pointer-events-none absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-indigo-500/[0.07] blur-3xl" />
 
@@ -265,3 +265,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

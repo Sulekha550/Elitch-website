@@ -107,7 +107,7 @@ export default function ProjectDetailsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0C0D0C] text-[#F2EEE7] pt-28 pb-20 font-sans">
+    <div className="min-h-screen bg-[#0C0D0C] text-[#F2EEE7] pt-16 sm:pt-28 pb-20 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Back navigation */}
         <Link
@@ -373,3 +373,4 @@ export default function ProjectDetailsPage() {
     </div>
   );
 }
+

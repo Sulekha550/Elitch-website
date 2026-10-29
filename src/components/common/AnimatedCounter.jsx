@@ -89,3 +89,4 @@ export default function AnimatedCounter({ value, duration = 1600, className = ''
     </span>
   );
 }
+
