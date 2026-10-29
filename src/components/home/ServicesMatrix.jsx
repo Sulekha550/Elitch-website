@@ -99,7 +99,7 @@ export default function ServicesMatrix() {
                       <img
                         src={service.image.url}
                         alt={service.image.alt || service.title}
-                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        className={`w-full h-full object-cover object-center transition-transform duration-700 ${service.id === 'qualitative-research' ? 'scale-[1.20] sm:scale-[1.22] group-hover:scale-[1.28]' : 'group-hover:scale-105'}`}
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />

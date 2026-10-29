@@ -278,7 +278,7 @@ export default function ServicesPage() {
                         <img
                           src={service.image.url}
                           alt={service.image.alt || service.title}
-                          className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                          className={`h-full w-full object-cover object-center transition-transform duration-700 ${service.id === 'qualitative-research' ? 'scale-[1.20] sm:scale-[1.22] group-hover:scale-[1.28]' : 'group-hover:scale-105'}`}
                           loading="lazy"
                         />
 
